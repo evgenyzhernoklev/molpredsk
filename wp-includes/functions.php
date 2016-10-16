@@ -5485,10 +5485,12 @@ function date_meta_callback( $post ) {
     wp_nonce_field( basename(__FILE__), 'links_nonce');
     $links_stored_meta = get_post_meta( $post->ID );
     ?>
-    <p>
-        <input type="text" name="dates-meta-original" id="dates-meta-original" value="<?php if ( isset ( $links_stored_meta['dates-meta-original'] ) ) echo $links_stored_meta['dates-meta-original'][0]; ?>" />
-		<input type="text" name="month-meta-original" id="month-meta-original" value="<?php if ( isset ( $links_stored_meta['month-meta-original'] ) ) echo $links_stored_meta['month-meta-original'][0]; ?>" />
-    </p>
+    <div>
+		<p>Даты:</p>
+        <p><input type="text" name="dates-meta-original" id="dates-meta-original" value="<?php if ( isset ( $links_stored_meta['dates-meta-original'] ) ) echo $links_stored_meta['dates-meta-original'][0]; ?>" /></p>
+		<p>Месяц:</p>
+		<p><input type="text" name="month-meta-original" id="month-meta-original" value="<?php if ( isset ( $links_stored_meta['month-meta-original'] ) ) echo $links_stored_meta['month-meta-original'][0]; ?>" /></p>
+    </div>
 <?php
 }
 
