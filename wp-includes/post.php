@@ -168,6 +168,69 @@ function create_initial_post_types() {
 	) );
 }
 
+
+
+// success stories
+function create_stories() {
+    register_post_type('stories', array(
+      'labels' => array(
+        'name'            => 'Истории успеха',
+        'singular_name'   => 'История успеха',
+        'add_new'         => 'Добавить новую',
+        'add_new_item'    => 'Добавить новый пост',
+        'edit'            => 'Редактировать',
+        'edit_item'       => 'Редактировать пост',
+        'new_item'        => 'Новый пост',
+        'all_items'       => 'Все истории',
+        'view'            => 'Посмотреть',
+        'view_item'       => 'Постмотреть пост',
+        'search_items'    => 'Найти пост',
+        'not_found'       => 'Постов не найдено',
+    ),
+    'public' => true, // show in admin panel?
+    'menu_position' => 4,
+    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'taxonomies' => array( '' ),
+    'has_archive' => true,
+    'capability_type' => 'post',
+    'menu_icon'   => 'dashicons-format-quote'
+    ));
+}
+add_action( 'init', 'create_stories' );
+
+
+
+// smi about us
+function create_smi_about() {
+    register_post_type('smi_about', array(
+      'labels' => array(
+        'name'            => 'СМИ о нас',
+        'singular_name'   => 'СМИ о нас',
+        'add_new'         => 'Добавить новую',
+        'add_new_item'    => 'Добавить новый пост',
+        'edit'            => 'Редактировать',
+        'edit_item'       => 'Редактировать пост',
+        'new_item'        => 'Новый пост',
+        'all_items'       => 'Все публикации',
+        'view'            => 'Посмотреть',
+        'view_item'       => 'Постмотреть пост',
+        'search_items'    => 'Найти пост',
+        'not_found'       => 'Постов не найдено',
+    ),
+    'public' => true, // show in admin panel?
+    'menu_position' => 6,
+    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'taxonomies' => array( '' ),
+    'has_archive' => true,
+    'capability_type' => 'post',
+    'menu_icon'   => 'dashicons-welcome-write-blog'
+    ));
+}
+add_action( 'init', 'create_smi_about' );
+
+
+
+
 /**
  * Retrieve attached file path based on attachment ID.
  *
