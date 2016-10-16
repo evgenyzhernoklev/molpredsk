@@ -4010,3 +4010,58 @@ p > video {
 		padding: 0;
 	}
 }
+
+
+
+/**********************************************************/
+/********************** custom styles **********************/
+/**********************************************************/
+/********** post list **********/
+.postsWrapper {
+    position: relative;
+    margin: 0 0 60px;
+    padding: 45px 280px 40px 200px;
+    border: 1px dashed #AFAEAE;
+}
+
+#content .postsWrapper .entry-summary {
+    margin: 0;
+}
+
+.postsWrapper .entry-summary p {
+    font-size: 18px;
+    color: #000000;
+}
+
+.postsWrapper .entry-title {
+    font-size: 32px;
+    color: #00327D;
+}
+
+.metaCustom__date {
+    display: inline-block;
+    position: absolute;
+    top: 43px;
+    left: 47px;
+    font-size: 64px;
+    line-height: 64px;
+    color: #000000;
+    text-align: center;
+}
+
+.metaCustom__date p {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.metaCustom__place {
+    display: inline-block;
+    max-width: 240px;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    font-size: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: right;
+}

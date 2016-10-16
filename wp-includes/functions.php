@@ -5487,6 +5487,7 @@ function date_meta_callback( $post ) {
     ?>
     <p>
         <input type="text" name="dates-meta-original" id="dates-meta-original" value="<?php if ( isset ( $links_stored_meta['dates-meta-original'] ) ) echo $links_stored_meta['dates-meta-original'][0]; ?>" />
+		<input type="text" name="month-meta-original" id="month-meta-original" value="<?php if ( isset ( $links_stored_meta['month-meta-original'] ) ) echo $links_stored_meta['month-meta-original'][0]; ?>" />
     </p>
 <?php
 }
@@ -5505,6 +5506,10 @@ function date_meta_save( $post_id ) {
     // Checks for input and sanitizes/saves if needed
     if( isset( $_POST[ 'dates-meta-original' ] ) ) {
         update_post_meta( $post_id, 'dates-meta-original', sanitize_text_field( $_POST[ 'dates-meta-original' ] ) );
+    }
+
+	if( isset( $_POST[ 'month-meta-original' ] ) ) {
+        update_post_meta( $post_id, 'month-meta-original', sanitize_text_field( $_POST[ 'month-meta-original' ] ) );
     }
 }
 add_action( 'save_post', 'date_meta_save' );
