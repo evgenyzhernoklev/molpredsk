@@ -12,7 +12,6 @@
 	// Retrieves the stored value from the database
 	$meta_date_custom = get_post_meta( get_the_ID(), 'dates-meta-original', true );
 	$meta_place_custom = get_post_meta( get_the_ID(), 'place-meta-original', true );
-	$meta_file_custom = get_post_meta( get_the_ID(), 'link', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -27,10 +26,6 @@
 
 		<?php if( !empty( $meta_place_custom ) ) {
 			echo '<div class="metaCustom__place"><p class="metaCustom__place__info">Место:</p>' . $meta_place_custom . '</div>';
-		} ?>
-
-		<?php if( !empty( $meta_file_custom ) ) {
-			echo '<a href="' . $meta_file_custom . '">Скачать положение<br/>о конкурсе</a>';
 		} ?>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
