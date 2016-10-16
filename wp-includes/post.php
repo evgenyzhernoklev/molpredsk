@@ -171,63 +171,153 @@ function create_initial_post_types() {
 
 
 // success stories
-function create_stories() {
-    register_post_type('stories', array(
-      'labels' => array(
-        'name'            => 'Истории успеха',
-        'singular_name'   => 'История успеха',
-        'add_new'         => 'Добавить новую',
-        'add_new_item'    => 'Добавить новый пост',
-        'edit'            => 'Редактировать',
-        'edit_item'       => 'Редактировать пост',
-        'new_item'        => 'Новый пост',
-        'all_items'       => 'Все истории',
-        'view'            => 'Посмотреть',
-        'view_item'       => 'Постмотреть пост',
-        'search_items'    => 'Найти пост',
-        'not_found'       => 'Постов не найдено',
-    ),
-    'public' => true, // show in admin panel?
-    'menu_position' => 4,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
-    'taxonomies' => array( '' ),
-    'has_archive' => true,
-    'capability_type' => 'post',
-    'menu_icon'   => 'dashicons-format-quote'
-    ));
-}
 add_action( 'init', 'create_stories' );
+function create_stories(){
+	$labels = array(
+				'name'            => 'Истории успеха',
+				'singular_name'   => 'Историю успеха',
+				'add_new'         => 'Добавить новую',
+				'add_new_item'    => 'Добавить новый пост',
+				'edit'            => 'Редактировать',
+				'edit_item'       => 'Редактировать пост',
+				'new_item'        => 'Новый пост',
+				'all_items'       => 'Все публикации',
+				'view'            => 'Посмотреть',
+				'view_item'       => 'Постмотреть пост',
+				'search_items'    => 'Найти пост',
+				'not_found'       => 'Постов не найдено',
+				'not_found_in_trash' => 'В корзине постов не найдено'
+			);
+	$supports = array(
+				'title',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'custom-fields',
+				'revisions',
+			);
+	$args = array(
+				'labels' => $labels,
+				'public' => true,
+				'hierarchical' => false,
+				'supports' => $supports,
+				'show_ui' => true,
+				'show_in_admin_bar' => true,
+				'show_in_menu' => true,
+				'menu_position' => 4,
+				'menu_icon' => 'dashicons-format-quote',
+				'taxonomies' => array(
+					// 'category',
+					// 'post_tag'
+					),
+				'has_archive' => false,
+				'can_export' => true,
+				'query_var' => true,
+				// 'register_meta_box_cb' => 'название_callback_функции',
+				'capability_type' => 'post'
+			);
+	register_post_type('stories',$args);
+}
+
+
+
+// galleries
+add_action('init', 'sk_galleries');
+function sk_galleries(){
+	$labels = array(
+				'name' => 'Галереи',
+				'singular_name' => 'Галерею',
+				'menu_name' => 'Галереи',
+				'all_items' => 'Все галереи',
+				'add_new' => 'Добавить свежую',
+				'add_new_item' => 'Добавить свежую галерею',
+				'edit_item' => 'Редактировать галерею',
+				'view_item' => 'Посмотреть галерею',
+				'search_items' => 'Найти галерею',
+				'not_found' =>  'Галерей не найдено',
+				'not_found_in_trash' => 'В корзине галерей не найдено'
+			);
+	$supports = array(
+				'title',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'custom-fields',
+				'revisions',
+			);
+	$args = array(
+				'labels' => $labels,
+				'public' => true,
+				'hierarchical' => false,
+				'supports' => $supports,
+				'show_ui' => true,
+				'show_in_admin_bar' => true,
+				'show_in_menu' => true,
+				'menu_position' => 5,
+				'menu_icon' => 'dashicons-format-gallery',
+				'taxonomies' => array(
+					// 'category',
+					// 'post_tag'
+					),
+				'has_archive' => false,
+				'can_export' => true,
+				'query_var' => true,
+				// 'register_meta_box_cb' => 'название_callback_функции',
+				'capability_type' => 'post'
+			);
+	register_post_type('galleries',$args);
+}
 
 
 
 // smi about us
-function create_smi_about() {
-    register_post_type('smi_about', array(
-      'labels' => array(
-        'name'            => 'СМИ о нас',
-        'singular_name'   => 'СМИ о нас',
-        'add_new'         => 'Добавить новую',
-        'add_new_item'    => 'Добавить новый пост',
-        'edit'            => 'Редактировать',
-        'edit_item'       => 'Редактировать пост',
-        'new_item'        => 'Новый пост',
-        'all_items'       => 'Все публикации',
-        'view'            => 'Посмотреть',
-        'view_item'       => 'Постмотреть пост',
-        'search_items'    => 'Найти пост',
-        'not_found'       => 'Постов не найдено',
-    ),
-    'public' => true, // show in admin panel?
-    'menu_position' => 6,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
-    'taxonomies' => array( '' ),
-    'has_archive' => true,
-    'capability_type' => 'post',
-    'menu_icon'   => 'dashicons-welcome-write-blog'
-    ));
-}
 add_action( 'init', 'create_smi_about' );
-
+function create_smi_about(){
+	$labels = array(
+				'name'            => 'СМИ о нас',
+				'singular_name'   => 'СМИ о нас',
+				'add_new'         => 'Добавить новую',
+				'add_new_item'    => 'Добавить новый пост',
+				'edit'            => 'Редактировать',
+				'edit_item'       => 'Редактировать пост',
+				'new_item'        => 'Новый пост',
+				'all_items'       => 'Все публикации',
+				'view'            => 'Посмотреть',
+				'view_item'       => 'Постмотреть пост',
+				'search_items'    => 'Найти пост',
+				'not_found'       => 'Постов не найдено',
+				'not_found_in_trash' => 'В корзине постов не найдено'
+			);
+	$supports = array(
+				'title',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'custom-fields',
+				'revisions',
+			);
+	$args = array(
+				'labels' => $labels,
+				'public' => true,
+				'hierarchical' => false,
+				'supports' => $supports,
+				'show_ui' => true,
+				'show_in_admin_bar' => true,
+				'show_in_menu' => true,
+				'menu_position' => 8,
+				'menu_icon' => 'dashicons-welcome-write-blog',
+				'taxonomies' => array(
+					// 'category',
+					// 'post_tag'
+					),
+				'has_archive' => false,
+				'can_export' => true,
+				'query_var' => true,
+				// 'register_meta_box_cb' => 'название_callback_функции',
+				'capability_type' => 'post'
+			);
+	register_post_type('media',$args);
+}
 
 
 
