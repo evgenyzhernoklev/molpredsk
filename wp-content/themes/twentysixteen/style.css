@@ -3412,8 +3412,8 @@ p > video {
 	.no-sidebar .post-navigation,
 	.no-sidebar .pagination,
 	.no-sidebar .page-header,
-	.no-sidebar .page-content,
-	.no-sidebar .content-bottom-widgets {
+	/*.no-sidebar .content-bottom-widgets,*/
+	.no-sidebar .page-content {
 		margin-right: 15%;
 		margin-left: 15%;
 	}

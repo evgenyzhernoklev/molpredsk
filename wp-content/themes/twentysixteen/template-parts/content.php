@@ -19,9 +19,9 @@
 
 	<?php twentysixteen_excerpt(); ?>
 
-	<?php twentysixteen_post_thumbnail(); ?>
+	<!-- <?php twentysixteen_post_thumbnail(); ?> -->
 
-	<div class="entry-content">
+	<!-- <div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -38,9 +38,10 @@
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div> -->
+	<!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
 		<?php
 			edit_post_link(
@@ -53,5 +54,6 @@
 				'</span>'
 			);
 		?>
-	</footer><!-- .entry-footer -->
+	</footer> -->
+	<!-- .entry-footer -->
 </article><!-- #post-## -->
