@@ -51,15 +51,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
  */
 
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
 /**
  * 1.0 - Normalize
  *
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
+ * {
+	 outline: 0;
+	 border: 0;
+	 margin: 0;
+	 padding: 0;
+	 vertical-align: baseline;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+ }
 
 html {
-	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
@@ -103,6 +116,8 @@ template {
 
 a {
 	background-color: transparent;
+	-webkit-transition: color 0.3s linear, border-color 0.3s linear, background 0.3s linear;
+	transition: color 0.3s linear, border-color 0.3s linear, background 0.3s linear;
 }
 
 abbr[title] {
@@ -304,10 +319,9 @@ input,
 select,
 textarea {
 	color: #1a1a1a;
-	font-family: Merriweather, Georgia, serif;
 	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.75;
+	line-height: 1.6;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -463,7 +477,7 @@ html {
 }
 
 body {
-	background: #1a1a1a;
+	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -802,7 +816,7 @@ a:active {
 }
 
 .main-navigation {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .site-footer .main-navigation {
@@ -820,8 +834,9 @@ a:active {
 }
 
 .main-navigation a {
-	color: #1a1a1a;
+	color: #504848;
 	display: block;
+	height: 81px;
 	line-height: 1.3125;
 	outline-offset: -1px;
 	padding: 0.84375em 0;
@@ -829,12 +844,20 @@ a:active {
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #007acc;
+	color: #1b6ca8;
 }
 
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
-	font-weight: 700;
+	color: #1a1a1a;
+}
+
+.main-navigation .current-menu-item > a {
+	border-bottom: 2px solid #1a1a1a;
+}
+
+.main-navigation .current-menu-item > a:hover {
+	color: #1a1a1a;
 }
 
 .main-navigation ul ul {
@@ -1584,7 +1607,14 @@ blockquote:after,
 
 .custom-logo-link {
 	display: block;
+	padding: 15px 45px 7px 25px;
+	border: 1px dashed #AFAEAE;
 }
+
+.custom-logo-link:hover {
+	background-color: #f9f9f9;
+}
+
 
 .custom-logo {
 	max-width: 180px;
@@ -2751,9 +2781,9 @@ p > video {
 		bottom: 0;
 	}
 
-	.site {
+	/*.site {
 		margin: 21px;
-	}
+	}*/
 
 	.site-main {
 		margin-bottom: 5.25em;
@@ -2979,13 +3009,16 @@ p > video {
 
 	.site-header-menu {
 		display: block;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
-		flex: 0 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		margin: 0;
+		padding-left: 30px;
+		border-bottom: 1px solid #c7c7c7;
 	}
 
 	.main-navigation {
-		margin: 0 -0.875em;
+		/*margin: 0 -0.875em;*/
 	}
 
 	.main-navigation .primary-menu,
@@ -2999,7 +3032,7 @@ p > video {
 
 	.main-navigation a {
 		outline-offset: -8px;
-		padding: 0.65625em 0.875em;
+		padding: 30px;
 		white-space: nowrap;
 	}
 
@@ -3370,10 +3403,10 @@ p > video {
 		width: 100%;
 	}
 
-	.no-sidebar .entry-header,
-	.no-sidebar .entry-content,
+	/*.no-sidebar .entry-header,*/
+	/*.no-sidebar .entry-content,*/
 	.no-sidebar .entry-summary,
-	.no-sidebar .entry-footer,
+	/*.no-sidebar .entry-footer,*/
 	.no-sidebar .comments-area,
 	.no-sidebar .image-navigation,
 	.no-sidebar .post-navigation,
@@ -3406,7 +3439,7 @@ p > video {
 	}
 
 	.site-branding,
-	.site-header-menu,
+	/*.site-header-menu,*/
 	.header-image {
 		margin-top: 1.75em;
 		margin-bottom: 1.75em;
@@ -3440,7 +3473,7 @@ p > video {
 		font-size: 40px;
 		font-size: 2.5rem;
 		line-height: 1.225;
-		margin-bottom: 1.05em;
+		/*margin-bottom: 1.05em;*/
 	}
 
 	.format-aside .entry-title,
