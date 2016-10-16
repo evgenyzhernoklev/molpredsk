@@ -5464,3 +5464,91 @@ function wp_raise_memory_limit( $context = 'admin' ) {
 
 	return false;
 }
+
+
+
+/* *************************** * * * **************************** */
+/* дополнительное поле в записях - дата проведения */
+/* *************************** * * * **************************** */
+function date_custom_meta() {
+    add_meta_box( 'metaDate',
+                  'Дата проведения мероприятия',
+                  'date_meta_callback',
+                  'post',
+                  'advanced',
+                  'default' );
+}
+add_action('add_meta_boxes', 'date_custom_meta');
+
+
+function date_meta_callback( $post ) {
+    wp_nonce_field( basename(__FILE__), 'links_nonce');
+    $links_stored_meta = get_post_meta( $post->ID );
+    ?>
+    <p>
+        <input type="text" name="dates-meta-original" id="dates-meta-original" value="<?php if ( isset ( $links_stored_meta['dates-meta-original'] ) ) echo $links_stored_meta['dates-meta-original'][0]; ?>" />
+    </p>
+<?php
+}
+
+function date_meta_save( $post_id ) {
+    // Checks save status
+    $is_autosave = wp_is_post_autosave( $post_id );
+    $is_revision = wp_is_post_revision( $post_id );
+    $is_valid_nonce = ( isset( $_POST[ 'links_nonce' ] ) && wp_verify_nonce( $_POST[ 'links_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+
+    // Exits script depending on save status
+    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
+        return;
+    }
+
+    // Checks for input and sanitizes/saves if needed
+    if( isset( $_POST[ 'dates-meta-original' ] ) ) {
+        update_post_meta( $post_id, 'dates-meta-original', sanitize_text_field( $_POST[ 'dates-meta-original' ] ) );
+    }
+}
+add_action( 'save_post', 'date_meta_save' );
+
+
+
+/* *************************** * * * **************************** */
+/* дополнительное поле в записях - место проведения */
+/* *************************** * * * **************************** */
+function place_custom_meta() {
+    add_meta_box( 'metaPlace',
+                  'Место проведения мероприятия',
+                  'place_meta_callback',
+                  'post',
+                  'advanced',
+                  'default' );
+}
+add_action('add_meta_boxes', 'place_custom_meta');
+
+
+function place_meta_callback( $post ) {
+    wp_nonce_field( basename(__FILE__), 'links_nonce');
+    $links_stored_meta = get_post_meta( $post->ID );
+    ?>
+    <p>
+        <input type="text" name="place-meta-original" id="place-meta-original" value="<?php if ( isset ( $links_stored_meta['place-meta-original'] ) ) echo $links_stored_meta['place-meta-original'][0]; ?>" />
+    </p>
+<?php
+}
+
+function place_meta_save( $post_id ) {
+    // Checks save status
+    $is_autosave = wp_is_post_autosave( $post_id );
+    $is_revision = wp_is_post_revision( $post_id );
+    $is_valid_nonce = ( isset( $_POST[ 'links_nonce' ] ) && wp_verify_nonce( $_POST[ 'links_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+
+    // Exits script depending on save status
+    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
+        return;
+    }
+
+    // Checks for input and sanitizes/saves if needed
+    if( isset( $_POST[ 'place-meta-original' ] ) ) {
+        update_post_meta( $post_id, 'place-meta-original', sanitize_text_field( $_POST[ 'place-meta-original' ] ) );
+    }
+}
+add_action( 'save_post', 'place_meta_save' );
