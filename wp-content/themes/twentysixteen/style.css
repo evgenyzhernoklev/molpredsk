@@ -1428,9 +1428,9 @@ blockquote:after,
  */
 
 .widget {
-	border-top: 4px solid #1a1a1a;
+	border-top: 3px solid #1a1a1a;
 	margin-bottom: 3.5em;
-	padding-top: 1.75em;
+	padding: 50px 0 30px;
 }
 
 .widget-area > :last-child,
@@ -1569,7 +1569,7 @@ blockquote:after,
 }
 
 .site-main {
-	margin-bottom: 3.5em;
+	margin-bottom: 20px;
 }
 
 .site-main > :last-child {
@@ -2168,7 +2168,7 @@ body.search-no-results .page-header {
 }
 
 .content-bottom-widgets .widget-area {
-	margin-bottom: 3.5em;
+	margin-bottom: 1.5em;
 }
 
 
@@ -2431,7 +2431,7 @@ body.search-no-results .page-header {
  */
 
 .site-footer {
-	padding: 0 7.6923% 1.75em;
+	/*padding: 0 7.6923% 1.75em;*/
 }
 
 .site-info {
@@ -2785,10 +2785,6 @@ p > video {
 		margin: 21px;
 	}*/
 
-	.site-main {
-		margin-bottom: 5.25em;
-	}
-
 	.site-header {
 		padding: 3.9375em 7.6923%;
 	}
@@ -2953,7 +2949,7 @@ p > video {
 	.comments-area,
 	.widget,
 	.content-bottom-widgets .widget-area {
-		margin-bottom: 5.25em;
+		margin-bottom: 1.5em;
 	}
 
 	.sidebar,
@@ -3174,7 +3170,6 @@ p > video {
 		font-size: 0.8125rem;
 		line-height: 1.6153846154;
 		margin-bottom: 3.230769231em;
-		padding-top: 1.615384615em;
 	}
 
 	.widget .widget-title {
@@ -3380,7 +3375,7 @@ p > video {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 0 4.5455% 3.5em;
+		/*padding: 0 4.5455% 3.5em;*/
 	}
 
 	.site-footer .social-navigation {
@@ -3430,12 +3425,9 @@ p > video {
  */
 
 @media screen and (min-width: 61.5625em) {
-	.site-main {
-		margin-bottom: 7.0em;
-	}
 
 	.site-header {
-		padding: 5.25em 4.5455%;
+		padding: 4.25em 4.5455%;
 	}
 
 	.site-branding,
@@ -3562,7 +3554,7 @@ p > video {
 	.sidebar,
 	.content-bottom-widgets .widget-area,
 	.widecolumn {
-		margin-bottom: 7.0em;
+		margin-bottom: 1.5em;
 	}
 
 	body:not(.search-results) .entry-summary {
@@ -3972,9 +3964,6 @@ p > video {
 		margin-bottom: 1.75em;
 	}
 
-	.site-main {
-		margin-bottom: 3.5em;
-	}
 
 	.entry-header,
 	.entry-footer,
@@ -4016,6 +4005,24 @@ p > video {
 /**********************************************************/
 /********************** custom styles **********************/
 /**********************************************************/
+.clearfix {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
 /********** post list **********/
 .postsWrapper {
     position: relative;
@@ -4064,4 +4071,107 @@ p > video {
     color: #000000;
     text-transform: uppercase;
     text-align: right;
+}
+
+
+
+/********** post page **********/
+.singlePostWrapper {
+    position: relative;
+}
+
+
+
+/* title block */
+.singlePostWrapper .entry-header {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.singlePostWrapper .entry-title {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.entry-header__date {
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+
+
+/* top image */
+.imgWrapper {
+    position: relative;
+}
+
+.imgWrapper__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.5);
+}
+
+.imgWrapper img {
+    width: 100%;
+}
+
+
+
+.singlePostWrapper .post-thumbnail {
+
+}
+
+
+
+/* post links block */
+.postLinksWrapper {
+    margin: 65px 0 60px;
+}
+
+.postLinksWrappe__place {
+    width: 50%;
+    float: left;
+}
+
+.postLinksBlock {
+    width: 50%;
+    float: left;
+    padding-left: 40px;
+    text-align: right;
+}
+
+.postLinksBlock__link {
+    display: inline-block;
+    width: 250px;
+    padding: 12px 20px 18px;
+    background-color: #ffffff;
+    border: 1px dashed #AFAEAE;
+    color: #1a1a1a;
+
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.postLinksBlock__link:hover {
+    background-color: #f9f9f9;
+    color: #007acc;
+}
+
+
+
+/* content */
+.postLinksContent {
+
 }

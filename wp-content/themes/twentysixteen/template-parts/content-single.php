@@ -10,53 +10,59 @@
 
 <?php
 	// Retrieves the stored value from the database
+	$meta_date_custom = get_post_meta( get_the_ID(), 'dates-meta-original', true );
+	$meta_month_custom = get_post_meta( get_the_ID(), 'month-meta-original', true );
+	$meta_place_custom = get_post_meta( get_the_ID(), 'place-meta-original', true );
+
 	$meta_file_custom = get_post_meta( get_the_ID(), 'link', true );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<?php twentysixteen_excerpt(); ?>
-
-	<?php twentysixteen_post_thumbnail(); ?>
-
-	<?php if( !empty( $meta_file_custom ) ) {
-		echo '<a href="' . $meta_file_custom . '">Скачать положение<br/>о конкурсе</a>';
-	} ?>
-
-	<div class="entry-content">
+<div class="singlePostWrapper clearfix">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
-
-			if ( '' !== get_the_author_meta( 'description' ) ) {
-				get_template_part( 'template-parts/biography' );
-			}
+			// twentysixteen_excerpt();
 		?>
-	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<!-- <?php twentysixteen_entry_meta(); ?> -->
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+		<div class="imgWrapper">
+			<div class="imgWrapper__overlay"></div>
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<?php if( !empty( $meta_date_custom ) && !empty( $meta_month_custom ) ) {
+					echo '<div class="entry-header__date">' . $meta_date_custom . ' ' . $meta_month_custom . '</div>';
+				} ?>
+			</header><!-- .entry-header -->
+
+			<?php twentysixteen_post_thumbnail(); ?>
+		</div>
+
+		<div class="postLinksWrapper clearfix">
+			<?php if( !empty( $meta_place_custom ) ) {
+				echo '<p class="postLinksWrappe__place">место:<br/>' . $meta_place_custom . '</p>';
+			} ?>
+			<div class="postLinksBlock">
+				<?php if( !empty( $meta_file_custom ) ) {
+					echo '<a class="postLinksBlock__link" href="' . $meta_file_custom . '">Скачать положение<br/>о конкурсе</a>';
+				} ?>
+			</div>
+		</div>
+
+		<div class="postLinksContent">
+			<?php
+				the_content();
+
+				wp_link_pages( array(
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
+					'after'       => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
+					'separator'   => '<span class="screen-reader-text">, </span>',
+				) );
+
+				if ( '' !== get_the_author_meta( 'description' ) ) {
+					get_template_part( 'template-parts/biography' );
+				}
+			?>
+		</div><!-- .entry-content -->
+	</article><!-- #post-## -->
+</div>
