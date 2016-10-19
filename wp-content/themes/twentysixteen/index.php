@@ -22,10 +22,12 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
 			<?php endif; ?>
+
+			<header class="headerEvents">
+				<img src="../wp-content/uploads/2016/10/bg_events.png" />
+				<h1 class="entry-title"><?php echo single_post_title(); ?></h1>
+			</header>
 
 			<?php
 			// Start the loop.
@@ -51,7 +53,6 @@ get_header(); ?>
 		// If no content, include the "No posts found" template.
 		else :
 			get_template_part( 'template-parts/content', 'none' );
-
 		endif;
 		?>
 

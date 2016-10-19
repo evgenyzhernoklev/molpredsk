@@ -3442,7 +3442,7 @@ p > video {
 @media screen and (min-width: 61.5625em) {
 
 	.site-header {
-		padding: 4.25em 4.5455%;
+		padding: 60px 4.5455%;
 	}
 
 	.site-branding,
@@ -4017,9 +4017,10 @@ p > video {
 
 
 
-/**********************************************************/
-/********************** custom styles **********************/
-/**********************************************************/
+/********************************************************************************************************************/
+/************************************************** custom styles ***************************************************/
+/********************************************************************************************************************/
+/****************************** common ******************************/
 .clearfix {
     overflow: hidden;
     zoom: 1;
@@ -4038,11 +4039,28 @@ p > video {
 
 
 
-/********** post list **********/
+/****************************** post list ******************************/
+.headerEvents {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.headerEvents img {
+    width: 100%;
+}
+
+.headerEvents .entry-title {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+
 .postsWrapper {
     position: relative;
     margin: 0 0 60px;
-    padding: 45px 280px 40px 200px;
+    padding: 55px 280px 45px 200px;
     border: 1px dashed #AFAEAE;
 }
 
@@ -4060,29 +4078,38 @@ p > video {
     color: #00327D;
 }
 
+.postsWrapper .entry-title a {
+    font-size: 32px;
+    color: #00327D;
+}
+
+.postsWrapper .entry-title a:hover {
+    color: #054eb9;
+}
+
 .metaCustom__date {
     display: inline-block;
     position: absolute;
-    top: 43px;
+    top: 30px;
     left: 47px;
-    font-size: 64px;
-    line-height: 64px;
+    font: 36px/48px 'Intro', sans-serif;
     color: #000000;
     text-align: center;
 }
 
 .metaCustom__date p {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 .metaCustom__place {
     display: inline-block;
     max-width: 240px;
     position: absolute;
-    bottom: 40px;
+    bottom: 44px;
     right: 30px;
     font-size: 18px;
+    font-family: 'Intro', sans-serif;
     color: #000000;
     text-transform: uppercase;
     text-align: right;
@@ -4090,7 +4117,7 @@ p > video {
 
 
 
-/********** post page **********/
+/****************************** post page ******************************/
 .singlePostWrapper {
     position: relative;
 }
