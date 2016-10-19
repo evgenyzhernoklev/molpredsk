@@ -4039,6 +4039,43 @@ p > video {
 
 
 
+/****************************** paginator ******************************/
+.pagination {
+    margin-bottom: 56px;
+    text-align: center;
+    border: 0;
+}
+
+.pagination:after {
+    left: 0;
+    right: auto;
+}
+
+.pagination .nav-links {
+    padding-right: 0;
+}
+
+.pagination .nav-links:after {
+    left: 0;
+    right: auto;
+}
+
+.pagination .page-numbers {
+    margin: 0 3px;
+}
+
+.pagination .prev {
+    left: 0;
+    right: auto;
+    margin: 0;
+}
+
+.pagination .next {
+    margin: 0;
+}
+
+
+
 /****************************** post list ******************************/
 .headerEvents {
     margin-bottom: 60px;

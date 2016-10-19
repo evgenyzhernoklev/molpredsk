@@ -25,7 +25,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<header class="headerEvents">
-				<img src="../wp-content/uploads/2016/10/bg_events.png" />
+				<img src="https://molpredsk.ru/wp-content/uploads/2016/10/bg_events.png" />
 				<h1 class="entry-title"><?php echo single_post_title(); ?></h1>
 			</header>
 
@@ -49,6 +49,8 @@ get_header(); ?>
 				'next_text'          => __( 'Next page', 'twentysixteen' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
+
+			get_sidebar( 'content-bottom' );
 
 		// If no content, include the "No posts found" template.
 		else :
