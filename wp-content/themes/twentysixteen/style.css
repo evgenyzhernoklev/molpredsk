@@ -780,7 +780,6 @@ a:active {
 	outline: 0;
 }
 
-.entry-content a,
 .entry-summary a,
 .taxonomy-description a,
 .logged-in-as a,
@@ -792,7 +791,6 @@ a:active {
 	box-shadow: 0 1px 0 0 currentColor;
 }
 
-.entry-content a:hover,
 .entry-content a:focus,
 .entry-summary a:hover,
 .entry-summary a:focus,
@@ -807,6 +805,14 @@ a:active {
 .textwidget a:hover,
 .textwidget a:focus {
 	box-shadow: none;
+}
+
+.entry-content a {
+    border-bottom: 1px solid #007acc;
+}
+
+.entry-content a:hover {
+    border-bottom-color: transparent;
 }
 
 
@@ -4336,4 +4342,15 @@ p > video {
 /* content */
 .postLinksContent {
 
+}
+
+
+
+/****************************** contacts template ******************************/
+.site-main-contacts {
+    margin-top: -9px;
+}
+
+.site-main-contacts .entry-title {
+    margin-bottom: 32px;
 }
