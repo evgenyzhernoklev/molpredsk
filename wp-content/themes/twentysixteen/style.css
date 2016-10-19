@@ -859,7 +859,7 @@ a:active {
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #1b6ca8;
+	color: #007acc;
 }
 
 .main-navigation .current-menu-item > a,
@@ -4076,6 +4076,89 @@ p > video {
 
 
 
+/****************************** footer ******************************/
+.content-bottom-widgets {
+    border-top: 3px solid #1a1a1a;
+}
+
+.content-bottom-widgets .widget-area {
+    margin-bottom: 5px;
+}
+
+.content-bottom-widgets .widget-area:last-child {
+    text-align: right;
+}
+
+.content-bottom-widgets .widget {
+    padding: 33px 0 10px;
+    border: 0;
+}
+
+.content-bottom-widgets .widget-area:last-child a {
+    margin-top: 5px;
+    margin-right: 20px;
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+
+
+.content-bottom-widgets .textwidget p {
+    margin-top: 10px;
+    font: 16px/21px 'Intro', sans-serif;
+}
+
+.content-bottom-widgets .textwidget a {
+    display: inline-block;
+    margin-bottom: 3px;
+    text-decoration: none;
+    font: 36px/42px 'Intro', sans-serif;
+    border-bottom: none;
+    box-shadow: none;
+    color: #00327D;
+}
+
+.content-bottom-widgets .textwidget a:hover {
+    color: #007acc;
+}
+
+.social_fb {
+    background: #00327D url('../../uploads/2016/10/social_fb.png') no-repeat center center;
+}
+
+.social_fb:hover {
+    background-color: #007acc;
+}
+
+.social_vk {
+    background: #00327D url('../../uploads/2016/10/social_vk.png') no-repeat center center;
+}
+
+.social_vk:hover {
+    background-color: #007acc;
+}
+
+.social_in {
+    background: #00327D url('../../uploads/2016/10/social_in.png') no-repeat center center;
+}
+
+.social_in:hover {
+    background-color: #007acc;
+}
+
+.social_od {
+    margin-right: 0!important;
+    background: #00327D url('../../uploads/2016/10/social_od.png') no-repeat center center;
+}
+
+.social_od:hover {
+    background-color: #007acc;
+}
+
+
+
 /****************************** post list ******************************/
 .headerEvents {
     margin-bottom: 60px;
@@ -4121,7 +4204,7 @@ p > video {
 }
 
 .postsWrapper .entry-title a:hover {
-    color: #054eb9;
+    color: #007acc;
 }
 
 .metaCustom__date {
