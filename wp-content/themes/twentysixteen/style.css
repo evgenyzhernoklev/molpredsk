@@ -4129,8 +4129,8 @@ p > video {
     position: absolute;
     top: 70px;
     left: 50%;
-    width: 360px;
-    margin-left: -150px;
+    width: 480px;
+    margin-left: -240px;
     text-align: center;
     color: #FFFFFF;
 }
