@@ -4347,10 +4347,10 @@ p > video {
 
 
 /****************************** contacts template ******************************/
-.site-main-contacts {
+.site-main-titleNoImg {
     margin-top: -9px;
 }
 
-.site-main-contacts .entry-title {
+.site-main-titleNoImg .entry-title {
     margin-bottom: 32px;
 }
