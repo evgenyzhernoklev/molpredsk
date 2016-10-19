@@ -852,6 +852,9 @@ a:active {
 	line-height: 1.3125;
 	outline-offset: -1px;
 	padding: 0.84375em 0;
+    font-family: 'intro', sans-serif;;
+    font-size: 16px;
+    color: #414141;
 }
 
 .main-navigation a:hover,
@@ -4099,7 +4102,7 @@ p > video {
     position: absolute;
     top: 70px;
     left: 50%;
-    width: 300px;
+    width: 360px;
     margin-left: -150px;
     text-align: center;
     color: #FFFFFF;
@@ -4107,16 +4110,16 @@ p > video {
 
 .singlePostWrapper .entry-title {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 48px;
+    font-family: 'intro', sans-serif;
+    font-size: 36px;
     color: #FFFFFF;
     font-weight: normal;
 }
 
 .entry-header__date {
-    font-size: 48px;
+    font-family: 'intro', sans-serif;
+    font-size: 36px;
     color: #FFFFFF;
-    font-weight: 300;
 }
 
 
