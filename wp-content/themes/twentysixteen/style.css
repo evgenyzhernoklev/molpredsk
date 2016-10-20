@@ -780,17 +780,6 @@ a:active {
 	outline: 0;
 }
 
-.entry-summary a,
-.taxonomy-description a,
-.logged-in-as a,
-.comment-content a,
-.pingback .comment-body > a,
-.textwidget a,
-.entry-footer a:hover,
-.site-info a:hover {
-	box-shadow: 0 1px 0 0 currentColor;
-}
-
 .entry-content a:focus,
 .entry-summary a:hover,
 .entry-summary a:focus,
@@ -4193,7 +4182,6 @@ p > video {
 }
 
 .col3--social a:hover {
-    color: #007acc;
     background-color: #007acc;
 }
 
@@ -4221,6 +4209,10 @@ p > video {
     color: #1a1a1a;
     border-bottom: none;
     box-shadow: none;
+}
+
+.col3--phone a:hover {
+    color: #007acc;
 }
 
 
