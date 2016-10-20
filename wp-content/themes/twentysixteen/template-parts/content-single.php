@@ -37,7 +37,7 @@
 
 		<div class="postLinksWrapper clearfix">
 			<?php if( !empty( $meta_place_custom ) ) {
-				echo '<p class="postLinksWrappe__place">место:<br/>' . $meta_place_custom . '</p>';
+				echo '<div class="postLinksWrappe__place"><p>место:</p>' . $meta_place_custom . '</div>';
 			} ?>
 			<div class="postLinksBlock">
 				<?php if( !empty( $meta_file_custom ) && $meta_file_custom != 'Выберите файл') {

@@ -4363,6 +4363,12 @@ p > video {
 .postLinksWrappe__place {
     width: 50%;
     float: left;
+    font-size: 21px;
+}
+
+.postLinksWrappe__place p {
+    margin-bottom: 5px;
+    font: 21px/24px 'Intro', sans-serif;
 }
 
 .postLinksBlock {
