@@ -856,10 +856,10 @@ a:active {
 	display: block;
 	height: 81px;
 	line-height: 1.3125;
-	outline-offset: -1px;
+	outline: 0;
 	padding: 0.84375em 0;
     font-family: 'intro', sans-serif;;
-    font-size: 16px;
+    font-size: 15px;
     color: #414141;
 }
 
@@ -3048,8 +3048,7 @@ p > video {
 	}
 
 	.main-navigation a {
-		outline-offset: -8px;
-		padding: 30px;
+		padding: 33px 30px 25px;
 		white-space: nowrap;
 	}
 
@@ -4104,26 +4103,26 @@ p > video {
     margin-top: 5px;
     margin-right: 20px;
     display: inline-block;
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
 }
 
 
 
 .content-bottom-widgets .textwidget p {
-    margin-top: 10px;
-    font: 16px/21px 'Intro', sans-serif;
+    margin-top: 5px;
+    font: 13px/18px 'Intro', sans-serif;
 }
 
 .content-bottom-widgets .textwidget a {
     display: inline-block;
     margin-bottom: 3px;
     text-decoration: none;
-    font: 36px/42px 'Intro', sans-serif;
+    font: 30px/36px 'Intro', sans-serif;
     border-bottom: none;
     box-shadow: none;
-    color: #00327D;
+    color: #1a1a1a;
 }
 
 .content-bottom-widgets .textwidget a:hover {
