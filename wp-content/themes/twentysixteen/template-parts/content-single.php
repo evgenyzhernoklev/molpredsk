@@ -40,7 +40,7 @@
 				echo '<p class="postLinksWrappe__place">место:<br/>' . $meta_place_custom . '</p>';
 			} ?>
 			<div class="postLinksBlock">
-				<?php if( !empty( $meta_file_custom ) ) {
+				<?php if( !empty( $meta_file_custom ) && $meta_file_custom != 'Выберите файл') {
 					echo '<a class="postLinksBlock__link" href="' . $meta_file_custom . '">Скачать положение<br/>о конкурсе</a>';
 				} ?>
 			</div>
