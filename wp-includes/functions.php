@@ -5568,13 +5568,15 @@ add_action( 'save_post', 'place_meta_save' );
 add_action("admin_init", "pdf_init");
 add_action('save_post', 'save_pdf_link');
 function pdf_init(){
-        add_meta_box("my-pdf", "Положение о конкурсе", "pdf_link", "post", "normal", "low");
+        add_meta_box("my-pdf", "Прикрепить файлы", "pdf_link", "post", "normal", "low");
         }
 function pdf_link(){
         global $post;
         $custom  = get_post_custom($post->ID);
         $link    = $custom["link"][0];
+        $idea    = $custom["idea"][0];
         $count   = 0;
+        $count_idea   = 0;
         echo '<div class="link_header">';
         $query_pdf_args = array(
                 'post_type' => 'attachment',
@@ -5584,6 +5586,7 @@ function pdf_link(){
                 );
         $query_pdf = new WP_Query( $query_pdf_args );
         $pdf = array();
+        echo '<p class="link_header_title link_header_title--first">Прикрепить положение о конкурсе</p>';
         echo '<select name="link">';
         echo '<option class="pdf_select">Выберите файл</option>';
         foreach ( $query_pdf->posts as $file) {
@@ -5597,17 +5600,41 @@ function pdf_link(){
         echo '</select><br /></div>';
         echo '<p>Выберите документ из списка.</p>';
         echo '<div class="pdf_count"><span>Файлы:</span> <b>'.$count.'</b></div>';
+
+        echo '<div class="link_header">';
+        echo '<p class="link_header_title">Прикрепить анкету</p>';
+        echo '<select name="idea">';
+        echo '<option class="pdf_select">Выберите файл</option>';
+        foreach ( $query_pdf->posts as $file) {
+           if($idea == $pdf[]= $file->guid){
+              echo '<option value="'.$pdf[]= $file->guid.'" selected="true">'.$pdf[]= $file->guid.'</option>';
+                 }else{
+              echo '<option value="'.$pdf[]= $file->guid.'">'.$pdf[]= $file->guid.'</option>';
+                 }
+                $count_idea++;
+        }
+        echo '</select><br /></div>';
+        echo '<p>Выберите документ из списка.</p>';
+        echo '<div class="pdf_count"><span>Файлы:</span> <b>'.$count.'</b></div>';
 }
 
 function save_pdf_link(){
         global $post;
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){ return $post->ID; }
         update_post_meta($post->ID, "link", $_POST["link"]);
+        update_post_meta($post->ID, "idea", $_POST["idea"]);
 }
 add_action( 'admin_head', 'pdf_css' );
 
 function pdf_css() {
         echo '<style type="text/css">
+        .link_header_title {
+            font-size: 14px;
+            padding: 15px 0 0;
+        }
+        .link_header_title--first {
+            padding-top: 5px;
+        }
         .pdf_select{
                 font-weight:bold;
                 background:#e5e5e5;

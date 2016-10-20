@@ -771,10 +771,6 @@ a:active {
 	color: #686868;
 }
 
-a:focus {
-	outline: thin dotted;
-}
-
 a:hover,
 a:active {
 	outline: 0;
@@ -4357,7 +4353,7 @@ p > video {
 
 /* post links block */
 .postLinksWrapper {
-    margin: 65px 0 60px;
+    margin: 56px 0 60px;
 }
 
 .postLinksWrappe__place {
@@ -4378,21 +4374,33 @@ p > video {
     text-align: right;
 }
 
+.postLinksBlock__item {
+    margin: 4px 0 20px;
+}
+
 .postLinksBlock__link {
     display: inline-block;
     width: 250px;
-    padding: 12px 20px 18px;
+    height: 90px;
+    padding: 35px 20px 5px;
+    font: 16px/20px 'Intro', sans-serif;
+    color: #1a1a1a;
     background-color: #ffffff;
     border: 1px dashed #AFAEAE;
-    color: #1a1a1a;
+    outline: 0;
 
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 
+.postLinksBlock__link--twoLines {
+    padding-top: 25px;
+}
+
 .postLinksBlock__link:hover {
-    background-color: #f9f9f9;
-    color: #007acc;
+    background-color: #007acc;
+    color: #fff;
+    border-color: #007acc;
 }
 
 
