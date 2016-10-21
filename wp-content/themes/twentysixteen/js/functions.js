@@ -206,7 +206,10 @@
 				arrows: false,
 				autoplay: true,
 				autoplaySpeed: 3000,
-				rtl: true
+				rtl: true,
+				draggable: false,
+				pauseOnHover: false,
+				accessibility: false
 			});
 		}
 	} );

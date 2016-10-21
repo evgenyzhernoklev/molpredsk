@@ -4214,8 +4214,12 @@ p > video {
 
 
 /****************************** main page slider ******************************/
-.sliderTop {
+.entry-content .sliderTop {
+    margin-bottom: 40px;
+}
 
+.sliderTop {
+    margin-bottom: 40px;
 }
 
 .sliderTopSlide {
@@ -4232,10 +4236,33 @@ p > video {
 
 .sliderTopSlide__caption {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 60px;
+    right: 80px;
     margin: 0;
-    font: 24px/30px 'Intro', sans-serif;
+    font: 27px/36px 'Intro', sans-serif;
+    text-align: left;
+    color: #414141;
+}
+
+.sliderTopSlide__caption--slide1 {
+    text-align: center;
+    bottom: 50%;
+    right: 50%;
+
+    -webkit-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+}
+
+.sliderTopSlide__caption--slide2 {
+
+}
+
+.sliderTopSlide__caption--slide3 {
+
+}
+
+.sliderTopSlide__caption--slide4 {
+    right: 25%;
 }
 
 
