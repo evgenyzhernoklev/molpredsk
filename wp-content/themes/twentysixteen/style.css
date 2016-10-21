@@ -50,7 +50,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 15.0 - Print
  */
 
-
+@import url('css/slick.css');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @font-face {
     font-family: 'intro';
@@ -4209,6 +4209,33 @@ p > video {
 
 .col3--phone a:hover {
     color: #007acc;
+}
+
+
+
+/****************************** main page slider ******************************/
+.sliderTop {
+
+}
+
+.sliderTopSlide {
+    position: relative;
+}
+
+.sliderTopSlide p {
+    margin: 0;
+}
+
+.sliderTopSlide__img {
+
+}
+
+.sliderTopSlide__caption {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    margin: 0;
+    font: 24px/30px 'Intro', sans-serif;
 }
 
 

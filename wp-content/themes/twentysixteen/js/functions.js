@@ -196,5 +196,18 @@
 
 		belowEntryMetaClass( 'img.size-full' );
 		belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
+
+		var $topSlider = $('.sliderTop');
+		if ($topSlider.length) {
+			$topSlider.slick({
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				rtl: true
+			});
+		}
 	} );
 } )( jQuery );
