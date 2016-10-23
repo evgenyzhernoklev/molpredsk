@@ -5659,3 +5659,75 @@ function pdf_file_url(){
         $custom = get_post_custom($wp_query->post->ID);
         echo $custom['link'][0];
 }
+
+
+
+/* *************************** * * * **************************** */
+/* дополнительное поле в записях - ссылка на регистрацию на странице события */
+/* *************************** * * * **************************** */
+/**
+ * Adds a meta box to the post editing screen
+ */
+function prfx_custom_meta() {
+    add_meta_box( 'prfx_meta', 'Ссылка на регистрацию', 'prfx_meta_callback', 'post', 'normal', 'low');
+}
+add_action( 'add_meta_boxes', 'prfx_custom_meta' );
+
+
+
+/**
+ * Outputs the content of the meta box
+ */
+function prfx_meta_callback( $post ) {
+    wp_nonce_field( basename( __FILE__ ), 'prfx_nonce' );
+    $prfx_stored_meta = get_post_meta( $post->ID );
+    ?>
+
+    <p>
+        <div class="prfx-row-content">
+            <label for="show-register-link">
+                <input type="checkbox" name="show-register-link" id="show-register-link" value="yes" <?php if ( isset ( $prfx_stored_meta['show-register-link'] ) ) checked( $prfx_stored_meta['show-register-link'][0], 'yes' ); ?> />
+                Отобразить сслыку на регистрацию
+            </label>
+
+        </div>
+    </p>
+
+    <p>Ссылка будет вести на страницу с регистрацией, если вы хотите перенаправить пользователя
+        на другую страницу - вбейте полный адрес в поле ниже (например, https://yandex.ru/).</p>
+
+    <p>
+        <label for="page-address" class="prfx-row-title">Адрес другой страницы</label>
+        <input type="text" name="page-address" id="page-address" value="<?php if ( isset ( $prfx_stored_meta['page-address'] ) ) echo $prfx_stored_meta['page-address'][0]; ?>" />
+    </p>
+
+    <?php
+}
+
+/**
+ * Saves the custom meta input & checkbox
+ */
+function prfx_meta_save( $post_id ) {
+    // Checks save status
+    $is_autosave = wp_is_post_autosave( $post_id );
+    $is_revision = wp_is_post_revision( $post_id );
+    $is_valid_nonce = ( isset( $_POST[ 'prfx_nonce' ] ) && wp_verify_nonce( $_POST[ 'prfx_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+
+    // Exits script depending on save status
+    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
+        return;
+    }
+
+    // Checks for input and sanitizes/saves if needed
+    if( isset( $_POST[ 'page-address' ] ) ) {
+        update_post_meta( $post_id, 'page-address', sanitize_text_field( $_POST[ 'page-address' ] ) );
+    }
+
+    // Checks for input and saves
+    if( isset( $_POST[ 'show-register-link' ] ) ) {
+        update_post_meta( $post_id, 'show-register-link', 'yes' );
+    } else {
+        update_post_meta( $post_id, 'show-register-link', '' );
+    }
+}
+add_action( 'save_post', 'prfx_meta_save' );

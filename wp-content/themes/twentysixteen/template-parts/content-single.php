@@ -15,7 +15,13 @@
 	$meta_place_custom = get_post_meta( get_the_ID(), 'place-meta-original', true );
 
 	$meta_file_custom = get_post_meta( get_the_ID(), 'link', true );
-    $meta_idea_custom = get_post_meta( get_the_ID(), 'idea', true );
+	$meta_idea_custom = get_post_meta( get_the_ID(), 'idea', true );
+
+	$meta_show_register_link = get_post_meta( get_the_ID(), 'show-register-link', true );
+	$meta_register_link = get_post_meta( get_the_ID(), 'page-address', true );
+	if ( empty( $meta_register_link ) ) {
+		$meta_register_link = 'https://molpredsk.ru/register/';
+	}
 ?>
 
 <div class="singlePostWrapper clearfix">
@@ -43,6 +49,10 @@
 			<div class="postLinksBlock">
 				<?php if( !empty( $meta_file_custom ) && $meta_file_custom != 'Выберите файл') {
 					echo '<p class="postLinksBlock__item"><a download class="postLinksBlock__link postLinksBlock__link--twoLines" href="' . $meta_file_custom . '">Скачать положение<br/>о конкурсе</a></p>';
+				} ?>
+
+				<?php if( !empty( $meta_show_register_link ) ) {
+					echo '<p class="postLinksBlock__item"><a class="postLinksBlock__link" href="' . $meta_register_link . '">Зарегистрироваться</a></p>';
 				} ?>
 
 				<?php if( !empty( $meta_idea_custom ) && $meta_idea_custom != 'Выберите файл') {
