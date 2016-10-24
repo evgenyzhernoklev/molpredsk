@@ -13,29 +13,29 @@
 
 		<div class="sliderTop" dir="rtl">
 			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="/wp-content/uploads/2016/10/slide11.png" /></p>
+				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide11.png" /></p>
 				<p class="sliderTopSlide__caption sliderTopSlide__caption--slide1">НАЧНИ БИЗНЕС <br/>С ВДОХНОВЕНИЯ</p>
 			</div>
 			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="/wp-content/uploads/2016/10/slide2.png" /></p>
+				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide2.png" /></p>
 				<p class="sliderTopSlide__caption sliderTopSlide__caption--slide2">СЕРИЯ ЯРКИХ<br/>СОБЫТИЙ</p>
 			</div>
 			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="/wp-content/uploads/2016/10/slide3.png" /></p>
+				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide3.png" /></p>
 				<p class="sliderTopSlide__caption sliderTopSlide__caption--slide3">повышение личной<br/>эффективности</p>
 			</div>
 			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="/wp-content/uploads/2016/10/slide4.png" /></p>
+				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide4.png" /></p>
 				<p class="sliderTopSlide__caption  sliderTopSlide__caption--slide4">продвижение<br/>своего проекта</p>
 			</div>
 		</div>
 
 		<div class="sliderBottomWrapper">
 			<div class="sliderBottomWrapper__leftBlock sliderBottomLeftBlock">
-
+				<a href="/register"><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/slide_register.png" /></a>
 			</div>
 			<div class="sliderBottomWrapper__rightBlock sliderBottomRightBlock">
-
+				<a href="https://molpredsk.ru/wp-content/uploads/2016/10/Zayavka-1.doc" download><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/send_idea.png" /></a>
 			</div>
 			<div class="sliderBottomWrapper__slider sliderBottom">
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C-%D0%BA%D1%80%D0%B5%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85-%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B0%D0%BF%D0%BE%D0%B2/">

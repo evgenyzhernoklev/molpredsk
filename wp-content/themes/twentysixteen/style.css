@@ -4268,6 +4268,41 @@ p > video {
 
 
 /****************************** main page slider bottom ******************************/
+.sliderBottomWrapper {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+
+
+/* side blocks */
+.sliderBottomWrapper__leftBlock {
+    width: 20%;
+    float: left;
+}
+
+
+
+.sliderBottomWrapper__rightBlock {
+    width: 20%;
+    float: right;
+}
+
+.sliderBottomWrapper__img {
+    display: block;
+    width: 100%;
+    margin-top: 12%;
+    -webkit-transition: -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear;
+}
+
+.sliderBottomWrapper__img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+
+/* slider */
 .sliderBottom {
     width: 60%;
     margin: 0 20%;
