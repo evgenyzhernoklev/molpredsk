@@ -4841,6 +4841,12 @@ p > video {
 
 
 @media (max-width: 767px) {
+    .singlePostWrapper .entry-header {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
     .singlePostWrapper .entry-title {
         font-size: 21px;
     }
