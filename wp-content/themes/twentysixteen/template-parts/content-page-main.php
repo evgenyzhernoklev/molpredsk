@@ -31,12 +31,6 @@
 		</div>
 
 		<div class="sliderBottomWrapper">
-			<div class="sliderBottomWrapper__leftBlock sliderBottomLeftBlock">
-				<a href="/register"><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/slide_register.png" /></a>
-			</div>
-			<div class="sliderBottomWrapper__rightBlock sliderBottomRightBlock">
-				<a href="https://molpredsk.ru/wp-content/uploads/2016/10/Zayavka-1.doc" download><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/send_idea.png" /></a>
-			</div>
 			<div class="sliderBottomWrapper__slider sliderBottom">
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C-%D0%BA%D1%80%D0%B5%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85-%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B0%D0%BF%D0%BE%D0%B2/">
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
@@ -47,7 +41,6 @@
 					</div>
 					<div class="slideBottom__img slideBottom__img--1"></div>
 				</div>
-
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/biznes_idea/">
 					<div class="slideBottom__img slideBottom__img--2"></div>
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
@@ -57,7 +50,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/бизнес-зарница/">
 					<div class="slideBottom__img slideBottom__img--3"></div>
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper slideBottomInfoWrapper--red">
@@ -66,7 +58,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/бизнесиада/">
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper slideBottomInfoWrapper--red">
 						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
@@ -75,7 +66,6 @@
 					</div>
 					<div class="slideBottom__img slideBottom__img--4"></div>
 				</div>
-
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B9-%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-%D1%80%D0%BE/">
 					<div class="slideBottom__img slideBottom__img--5"></div>
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
@@ -85,7 +75,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/%D0%B4%D0%B5%D0%BB%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B8%D0%B3%D1%80%D1%8B-%D0%B4%D0%BB%D1%8F-%D1%81%D1%82%D0%B0%D1%80%D1%88%D0%B5%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2/">
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
 						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
@@ -95,6 +84,12 @@
 					</div>
 					<div class="slideBottom__img slideBottom__img--6"></div>
 				</div>
+			</div>
+			<div class="sliderBottomWrapper__leftBlock sliderBottomLeftBlock">
+				<a href="/register"><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/slide_register.png" /></a>
+			</div>
+			<div class="sliderBottomWrapper__rightBlock sliderBottomRightBlock">
+				<a href="https://molpredsk.ru/wp-content/uploads/2016/10/Zayavka-1.doc" download><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/send_idea.png" /></a>
 			</div>
 		</div>
 
