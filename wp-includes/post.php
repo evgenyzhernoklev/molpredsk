@@ -205,7 +205,7 @@ function create_stories(){
 				'show_in_admin_bar' => true,
 				'show_in_menu' => true,
 				'menu_position' => 4,
-				'menu_icon' => 'dashicons-format-quote',
+				'menu_icon' => 'dashicons-awards',
 				'taxonomies' => array(
 					// 'category',
 					// 'post_tag'
@@ -317,6 +317,57 @@ function create_smi_about(){
 				'capability_type' => 'post'
 			);
 	register_post_type('media',$args);
+}
+
+
+
+// news
+add_action( 'init', 'create_news_block' );
+function create_news_block(){
+	$labels = array(
+				'name'            => 'Новости',
+				'singular_name'   => 'Новость',
+				'add_new'         => 'Добавить новую',
+				'add_new_item'    => 'Добавить новость',
+				'edit'            => 'Редактировать',
+				'edit_item'       => 'Редактировать новость',
+				'new_item'        => 'Новая новость',
+				'all_items'       => 'Все новости',
+				'view'            => 'Посмотреть',
+				'view_item'       => 'Постмотреть новость',
+				'search_items'    => 'Найти новость',
+				'not_found'       => 'Новостей не найдено',
+				'not_found_in_trash' => 'В корзине новостей не найдено'
+			);
+	$supports = array(
+				'title',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'custom-fields',
+				'revisions',
+			);
+	$args = array(
+				'labels' => $labels,
+				'public' => true,
+				'hierarchical' => false,
+				'supports' => $supports,
+				'show_ui' => true,
+				'show_in_admin_bar' => true,
+				'show_in_menu' => true,
+				'menu_position' => 9,
+				'menu_icon' => 'dashicons-media-default',
+				'taxonomies' => array(
+					// 'category',
+					// 'post_tag'
+					),
+				'has_archive' => false,
+				'can_export' => true,
+				'query_var' => true,
+				// 'register_meta_box_cb' => 'название_callback_функции',
+				'capability_type' => 'post'
+			);
+	register_post_type('news_molpred',$args);
 }
 
 
