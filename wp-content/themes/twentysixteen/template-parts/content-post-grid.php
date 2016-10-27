@@ -8,6 +8,9 @@
  */
 ?>
 
+<?php
+	// шаблон для отображения новости на странице списка новостей
+?>
 <article class="colFlex colFlex--2" id="post-<?php the_ID(); ?>" >
 	<?php if ( has_post_thumbnail() ) { ?>
 		<a class="colFlexImgWrapper post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">

@@ -9,6 +9,7 @@
 ?>
 
 <?php
+	// шаблон для отображения события на странице списка событий
 	// Retrieves the stored value from the database
 	$meta_date_custom = get_post_meta( get_the_ID(), 'dates-meta-original', true );
 	$meta_month_custom = get_post_meta( get_the_ID(), 'month-meta-original', true );
