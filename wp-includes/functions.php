@@ -5468,6 +5468,51 @@ function wp_raise_memory_limit( $context = 'admin' ) {
 
 
 /* *************************** * * * **************************** */
+/* дополнительное поле в историях успеха - портрет */
+/* *************************** * * * **************************** */
+function portrait_custom_meta() {
+    add_meta_box( 'metaPortrait',
+                  'Портрет предпринимателя',
+                  'portrait_meta_callback',
+                  'post',
+                  'advanced',
+                  'default' );
+}
+add_action('add_meta_boxes', 'portrait_custom_meta');
+
+
+function portrait_meta_callback( $post ) {
+    wp_nonce_field( basename(__FILE__), 'links_nonce');
+    $links_stored_meta = get_post_meta( $post->ID );
+    ?>
+    <div>
+		<p>Адрес картинки:</p>
+        <p><input type="text" name="portrait-meta-original" id="portrait-meta-original" value="<?php if ( isset ( $links_stored_meta['portrait-meta-original'] ) ) echo $links_stored_meta['portrait-meta-original'][0]; ?>" /></p>
+    </div>
+<?php
+}
+
+function portrait_meta_save( $post_id ) {
+    // Checks save status
+    $is_autosave = wp_is_post_autosave( $post_id );
+    $is_revision = wp_is_post_revision( $post_id );
+    $is_valid_nonce = ( isset( $_POST[ 'links_nonce' ] ) && wp_verify_nonce( $_POST[ 'links_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+
+    // Exits script depending on save status
+    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
+        return;
+    }
+
+    // Checks for input and sanitizes/saves if needed
+    if( isset( $_POST[ 'portrait-meta-original' ] ) ) {
+        update_post_meta( $post_id, 'portrait-meta-original', sanitize_text_field( $_POST[ 'portrait-meta-original' ] ) );
+    }
+}
+add_action( 'save_post', 'portrait_meta_save' );
+
+
+
+/* *************************** * * * **************************** */
 /* дополнительное поле в записях - дата проведения */
 /* *************************** * * * **************************** */
 function date_custom_meta() {

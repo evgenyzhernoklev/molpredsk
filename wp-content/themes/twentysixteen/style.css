@@ -4830,6 +4830,10 @@ p > video {
     line-height: 0;
 }
 
+.site-content .entry-title.linkTabTitle {
+    margin-bottom: 50px;
+}
+
 .linkTab {
     display: inline-block;
     padding-right: 20px;
@@ -5153,7 +5157,16 @@ p > video {
 
 
 
-/* stories */
+@media (max-width: 767px) {
+    .singlePostWrapper .titleNews {
+        font-size: 21px;
+        line-height: 27px;
+    }
+}
+
+
+
+/****************************** stories page ******************************/
 .singlePostWrapper--stories {
     margin-top: -7px;
 }
@@ -5162,12 +5175,32 @@ p > video {
     margin-bottom: 26px;
 }
 
+.postPortraitWrapper {
+    max-width: 600px;
+    float: left;
+    margin: 6px 30px 15px 0;
+}
+
+.postPortraitWrapper__img {
+    display: block;
+    width: 100%;
+}
+
+
+
+@media (max-width: 992px) {
+    .postPortraitWrapper {
+        max-width: 360px;
+    }
+}
+
 
 
 @media (max-width: 767px) {
-    .singlePostWrapper .titleNews {
-        font-size: 21px;
-        line-height: 27px;
+    .postPortraitWrapper {
+        max-width: none;
+        width: 100%;
+        float: none;
     }
 }
 

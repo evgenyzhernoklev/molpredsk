@@ -11,7 +11,7 @@
 <?php
 	// внутренняя страница историй успеха
 	// Retrieves the stored value from the database
-	$meta_register_link = get_post_meta( get_the_ID(), 'page-address', true );
+	$meta_portrait = get_post_meta( get_the_ID(), 'portrait-meta-original', true );
 ?>
 
 <div class="singlePostWrapper singlePostWrapper--stories clearfix">
@@ -19,6 +19,12 @@
 		<?php the_title( '<h1 class="entry-title titleNews">', '</h1>' ); ?>
 
 		<div class="postLinksContent">
+			<?php if( !empty( $meta_portrait ) ) { ?>
+				<div class="postPortraitWrapper">
+					<img class="postPortraitWrapper__img" src="<?php echo $meta_portrait ?>" />
+				</div>
+			<?php } ?>
+
 			<?php
 				the_content();
 
