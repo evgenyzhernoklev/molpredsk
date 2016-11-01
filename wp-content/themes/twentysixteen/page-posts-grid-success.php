@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Список постов "СМИ о нас"
+ Template Name: Список постов "Истории успеха"
 */
 
 get_header(); ?>
@@ -9,14 +9,14 @@ get_header(); ?>
 	<main id="main" class="site-main site-main-titleNoImg" role="main">
 		<h1 class="entry-title linkTabTitle">
 			<a class="linkTab" href="/news/">Новости</a>
+			<a class="linkTab" href="/media-about/">СМИ о нас</a>
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
-			<a class="linkTab" href="/success/">Истории успеха</a>
 		</h1>
 
 		<div class="colsFlex colsFlexGrid">
 			<?php
 				$args = array(
-							'post_type' => 'media',
+							'post_type' => 'stories',
 							'publish' => true,
 							'paged' => get_query_var('paged'),
 							'posts_per_page' => 6

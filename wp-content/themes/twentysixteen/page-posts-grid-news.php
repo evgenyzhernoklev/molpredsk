@@ -7,7 +7,11 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main site-main-titleNoImg" role="main">
-		<h1 class="entry-title"><?php the_title() ?></h1>
+		<h1 class="entry-title linkTabTitle">
+			<span class="linkTab linkTab--active"><?php the_title() ?></span>
+			<a class="linkTab" href="/media-about/">СМИ о нас</a>
+			<a class="linkTab" href="/success/">Истории успеха</a>
+		</h1>
 
 		<div class="colsFlex colsFlexGrid">
 			<?php
