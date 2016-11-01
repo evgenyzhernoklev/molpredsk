@@ -4919,6 +4919,7 @@ p > video {
 /* top image */
 .imgWrapper {
     position: relative;
+    margin-bottom: 22px;
 }
 
 .imgWrapper__overlay {

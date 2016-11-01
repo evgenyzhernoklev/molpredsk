@@ -43,6 +43,7 @@
 			<?php twentysixteen_post_thumbnail(); ?>
 		</div>
 
+		<?php if ( !empty($meta_place_custom) || !empty($meta_show_register_link) || (!empty( $meta_file_custom ) && $meta_file_custom != 'Выберите файл') || (!empty( $meta_idea_custom ) && $meta_idea_custom != 'Выберите файл') ) { ?>
 		<div class="postLinksWrapper clearfix">
 			<?php if( !empty( $meta_place_custom ) ) {
 				echo '<div class="postLinksWrappe__place"><p>место:</p>' . $meta_place_custom . '</div>';
@@ -61,6 +62,8 @@
 				} ?>
 			</div>
 		</div>
+		<?php } ?>
+
 
 		<div class="postLinksContent">
 			<?php
