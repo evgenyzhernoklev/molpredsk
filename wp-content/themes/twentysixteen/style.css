@@ -5082,6 +5082,19 @@ p > video {
 
 
 
+/****************************** news page ******************************/
+.singlePostWrapper--news {
+    margin-top: -7px;
+}
+
+.singlePostWrapper .titleNews {
+    margin-bottom: 42px;
+    font-size: 27px;
+    line-height: 36px;
+    color: #1a1a1a;
+}
+
+
 /****************************** contacts template ******************************/
 .site-main-titleNoImg {
     margin-top: -9px;
