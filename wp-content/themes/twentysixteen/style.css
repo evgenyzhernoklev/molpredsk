@@ -4102,6 +4102,30 @@ p > video {
 }
 
 
+.entry-content .linkDoc,
+.linkDoc {
+    display: block;
+    padding: 17px 20px 15px;
+    border: 1px dashed #AFAEAE;
+    font: 27px/36px 'Intro', sans-serif;
+    color: #00327D;
+    text-align: center;
+    text-decoration: none;
+}
+
+.entry-content .linkDoc:hover,
+.linkDoc:hover {
+    color: #007acc;
+    border: 1px dashed #AFAEAE;
+}
+
+
+
+.subTitle {
+    font: 32px/40px 'Intro', sans-serif;
+}
+
+
 
 @media (max-width: 1200px) {
     .site-header,
@@ -4129,6 +4153,14 @@ p > video {
 
     .entry-content p {
         margin-bottom: 15px;
+    }
+
+
+
+    .entry-content .linkDoc,
+    .linkDoc {
+        font-size: 21px;
+        line-height: 27px;
     }
 }
 
