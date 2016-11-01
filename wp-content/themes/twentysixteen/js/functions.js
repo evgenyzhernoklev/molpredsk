@@ -233,5 +233,17 @@
 			var target = $(this).data('href');
 			location.href = target;
 		});
+
+
+
+		// video on main page
+		$('.videoWrapper').one('click', function(e) {
+			e.preventDefault();
+			var $videoFrame = $(this).find('iframe'),
+				videoSRC = $videoFrame.attr('src');
+
+			$(this).find('.videoWrapper__poster').fadeOut(300);
+			$videoFrame.attr('src', videoSRC + '&autoplay=1');
+		});
 	} );
 } )( jQuery );
