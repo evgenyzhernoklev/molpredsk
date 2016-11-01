@@ -15,6 +15,7 @@
 <div class="singlePostWrapper singlePostWrapper--news clearfix">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php the_title( '<h1 class="entry-title titleNews">', '</h1>' ); ?>
+		<p class="entry-date dateNews"><?php echo get_the_date(); ?></p>
 
 		<div class="postLinksContent">
 			<?php

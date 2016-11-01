@@ -5141,11 +5141,25 @@ p > video {
 }
 
 .singlePostWrapper .titleNews {
-    margin-bottom: 42px;
+    margin-bottom: 5px;
     font-size: 27px;
     line-height: 36px;
     color: #1a1a1a;
 }
+
+.dateNews {
+    font-family: 'Intro', sans-serif;
+}
+
+
+
+@media (max-width: 767px) {
+    .singlePostWrapper .titleNews {
+        font-size: 21px;
+        line-height: 27px;
+    }
+}
+
 
 
 /****************************** contacts template ******************************/
