@@ -8,9 +8,9 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main site-main-titleNoImg" role="main">
 		<h1 class="entry-title linkTabTitle">
-			<a class="linkTab" href="/news/">Новости</a>
+			<a class="linkTab" href="/news_molpred/">Новости</a>
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
-			<a class="linkTab" href="/success/">Истории успеха</a>
+			<a class="linkTab" href="/stories/">Истории успеха</a>
 		</h1>
 
 		<div class="colsFlex colsFlexGrid">

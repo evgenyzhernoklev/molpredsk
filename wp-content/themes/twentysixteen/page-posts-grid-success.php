@@ -8,8 +8,8 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main site-main-titleNoImg" role="main">
 		<h1 class="entry-title linkTabTitle">
-			<a class="linkTab" href="/news/">Новости</a>
-			<a class="linkTab" href="/media-about/">СМИ о нас</a>
+			<a class="linkTab" href="/news_molpred/">Новости</a>
+			<a class="linkTab" href="/media/">СМИ о нас</a>
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
 		</h1>
 
