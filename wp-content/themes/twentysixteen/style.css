@@ -5153,6 +5153,17 @@ p > video {
 
 
 
+/* stories */
+.singlePostWrapper--stories {
+    margin-top: -7px;
+}
+
+.singlePostWrapper--stories .titleNews {
+    margin-bottom: 26px;
+}
+
+
+
 @media (max-width: 767px) {
     .singlePostWrapper .titleNews {
         font-size: 21px;
