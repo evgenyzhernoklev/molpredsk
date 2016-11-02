@@ -4763,15 +4763,53 @@ p > video {
 /* stories slider */
 .sliderBottomWrapper--stories {
 
-    }
+}
+
+.sliderBottomWrapper--stories .sliderBottom {
+    margin: 0;
+    width: 100%;
+}
 
 .sliderBottomWrapper--stories .slideBottomInfoWrapper {
+    padding-top: 40px;
     background: url('../../uploads/2016/11/bg_story_slider.jpg') no-repeat center center;
+
+    flex-basis: 52.5%;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.slideBottomInfoWrapper__name {
+    margin-bottom: 30px;
+    color: #FF0000;
+}
+
+.slideBottomInfoWrapper__quoute {
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.slideBottomInfoWrapper__place {
+    margin-bottom: 0;
+    font: 21px/27px 'Open Sans', sans-serif;
+    color: #000000;
+}
+
+
+
+.sliderBottomWrapper--stories .slideBottom__img {
+    flex-basis: 47.5%;
+}
+
+.slideBottom__img--story1 {
+    background-image: url('../../uploads/2016/11/aparin.jpg');
+}
+
+.slideBottom__img--story2 {
+    background-image: url('../../uploads/2016/11/chizhov.jpg');
 }
 
 

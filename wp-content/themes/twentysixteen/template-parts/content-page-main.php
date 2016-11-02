@@ -238,6 +238,14 @@
 					<div class="slideBottom__img slideBottom__img--story1"></div>
 				</div>
 
+				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/?stories=%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0-%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D1%8F-%D1%87%D0%B8%D0%B6%D0%BE%D0%B2%D0%B0">
+					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
+						<p class="slideBottomInfoWrapper__name">Георгий Чижов:</p>
+						<p class="slideBottomInfoWrapper__quoute">«Не воруйте чужие марки»</p>
+						<p class="slideBottomInfoWrapper__place">ЧоудПДО «Играя Развиваем»<br/>ООО «УТилизация»<br/>НП «ПоСЭБ»</p>
+					</div>
+					<div class="slideBottom__img slideBottom__img--story2"></div>
+				</div>
 			</div>
 		</div>
 
