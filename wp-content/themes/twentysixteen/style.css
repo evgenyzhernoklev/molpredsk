@@ -5004,12 +5004,14 @@ p > video {
 }
 
 .colsFlexGrid .post-title {
+    margin-top: 0;
     margin-bottom: 10px;
     font: 21px/27px 'Intro', sans-serif;
 }
 
 .colsFlexGrid .post-title a {
     color: #1a1a1a;
+    border: 0;
 }
 
 .colsFlexGrid .post-title a:hover {

@@ -94,7 +94,43 @@
 		</div>
 
 		<h3 class="subTitle"><span>Новости</span> <a class="subTitle__link" href="/news/">СМОТРеть ВСЕ НОВОСТИ ></a></h3>
-		
+
+		<div class="colsFlex colsFlexGrid">
+			<?php
+				$args = array(
+							'post_type' => 'news',
+							'publish' => true,
+							'paged' => get_query_var('paged'),
+							'posts_per_page' => 2
+					 	);
+
+				query_posts($args);
+
+				while ( have_posts() ) : the_post();
+
+			?>
+
+				<article class="colFlex colFlex--2" id="post-<?php the_ID(); ?>" >
+					<?php if ( has_post_thumbnail() ) { ?>
+						<a class="colFlexImgWrapper post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+						</a>
+					<?php } ?>
+
+					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+					<div class="colFlexExcerpt">
+						<?php the_excerpt(); ?>
+					</div>
+				</article>
+
+			<?php
+
+				endwhile;
+
+				wp_reset_query();
+			?>
+		</div>
 
 
 		<?php
