@@ -10,7 +10,7 @@ get_header(); ?>
 		<h1 class="entry-title linkTabTitle">
 			<a class="linkTab" href="/news/">Новости</a>
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
-			<a class="linkTab" href="/success/">Истории успеха</a>
+			<a class="linkTab" href="/stories/">Истории успеха</a>
 		</h1>
 
 		<div class="colsFlex colsFlexGrid">
@@ -37,6 +37,8 @@ get_header(); ?>
 				'next_text'          => __( 'Next page', 'twentysixteen' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
+
+			wp_reset_query();
 		?>
 
 	</main><!-- .site-main -->

@@ -214,7 +214,8 @@ function create_stories(){
 				'can_export' => true,
 				'query_var' => true,
 				// 'register_meta_box_cb' => 'название_callback_функции',
-				'capability_type' => 'post'
+				'capability_type' => 'post',
+				'rewrite' => false
 			);
 	register_post_type('stories',$args);
 }
@@ -263,7 +264,8 @@ function sk_galleries(){
 				'can_export' => true,
 				'query_var' => true,
 				// 'register_meta_box_cb' => 'название_callback_функции',
-				'capability_type' => 'post'
+				'capability_type' => 'post',
+				'rewrite' => false
 			);
 	register_post_type('galleries',$args);
 }
@@ -314,7 +316,8 @@ function create_smi_about(){
 				'can_export' => true,
 				'query_var' => true,
 				// 'register_meta_box_cb' => 'название_callback_функции',
-				'capability_type' => 'post'
+				'capability_type' => 'post',
+				'rewrite' => false
 			);
 	register_post_type('media',$args);
 }
@@ -365,9 +368,10 @@ function create_news_block(){
 				'can_export' => true,
 				'query_var' => true,
 				// 'register_meta_box_cb' => 'название_callback_функции',
-				'capability_type' => 'post'
+				'capability_type' => 'post',
+				'rewrite' => false
 			);
-	register_post_type('news_molpred',$args);
+	register_post_type('news',$args);
 }
 
 

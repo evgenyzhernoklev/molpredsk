@@ -9,7 +9,7 @@ get_header(); ?>
 	<main id="main" class="site-main site-main-titleNoImg" role="main">
 		<h1 class="entry-title linkTabTitle">
 			<a class="linkTab" href="/news/">Новости</a>
-			<a class="linkTab" href="/media-about/">СМИ о нас</a>
+			<a class="linkTab" href="/media/">СМИ о нас</a>
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
 		</h1>
 
@@ -37,6 +37,8 @@ get_header(); ?>
 				'next_text'          => __( 'Next page', 'twentysixteen' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
+
+			wp_reset_query();
 		?>
 
 	</main><!-- .site-main -->

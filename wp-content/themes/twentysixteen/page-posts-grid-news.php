@@ -9,14 +9,14 @@ get_header(); ?>
 	<main id="main" class="site-main site-main-titleNoImg" role="main">
 		<h1 class="entry-title linkTabTitle">
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
-			<a class="linkTab" href="/media-about/">СМИ о нас</a>
-			<a class="linkTab" href="/success/">Истории успеха</a>
+			<a class="linkTab" href="/media/">СМИ о нас</a>
+			<a class="linkTab" href="/stories/">Истории успеха</a>
 		</h1>
 
 		<div class="colsFlex colsFlexGrid">
 			<?php
 				$args = array(
-							'post_type' => 'news_molpred',
+							'post_type' => 'news',
 							'publish' => true,
 							'paged' => get_query_var('paged'),
 							'posts_per_page' => 6
@@ -37,6 +37,8 @@ get_header(); ?>
 				'next_text'          => __( 'Next page', 'twentysixteen' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
+
+			wp_reset_query();
 		?>
 
 	</main><!-- .site-main -->
