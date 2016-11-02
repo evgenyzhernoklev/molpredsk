@@ -4522,6 +4522,7 @@ p > video {
 
 /****************************** main page slider bottom ******************************/
 .sliderBottomWrapper {
+    margin-bottom: 50px;
     position: relative;
     -webkit-transform: translate3d(0, 0, 0);
 }
@@ -4693,6 +4694,7 @@ p > video {
 
 /****************************** main page content ******************************/
 .home .subTitle {
+    margin-top: 0;
     color: #007acc;
     font-size: 36px;
 }
@@ -4744,8 +4746,12 @@ p > video {
 /* news */
 .colsFlexGrid__section {
     margin-bottom: 14px;
-    color: #FF0000;
     font: 16px/21px 'Intro', sans-serif;
+}
+
+.colsFlexGrid__section a {
+    color: #FF0000;
+    border: 0;
 }
 
 
@@ -4998,7 +5004,7 @@ p > video {
 }
 
 .colsFlexGrid .colFlex--2 {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     flex-basis: 47.5%;
     overflow: hidden;
 }
