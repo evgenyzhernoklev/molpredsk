@@ -4933,8 +4933,8 @@ p > video {
     padding-right: 20px;
     margin-right: 20px;
     border-right: 2px solid #1a1a1a;
-    font-size: 40px;
-    line-height: 49px;
+    font-size: 30px;
+    line-height: 40px;
     cursor: pointer;
 }
 
@@ -4951,7 +4951,7 @@ p > video {
 
 @media (max-width: 992px) {
     .linkTab {
-        font-size: 28px;
+        font-size: 27px;
         line-height: 37px;
     }
 }
@@ -5295,6 +5295,52 @@ p > video {
         max-width: none;
         width: 100%;
         float: none;
+    }
+}
+
+
+
+/****************************** docs page ******************************/
+.site-main-docs .entry-content p:first-child {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -moz-flex;
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+
+    flex-wrap: wrap;
+
+    overflow: hidden;
+    zoom: 1;
+
+    justify-content: space-between;
+}
+
+.site-main-docs .entry-content p:first-child br {
+    display: none;
+}
+
+.site-main-docs .linkDoc {
+    padding-top: 38px;
+    padding-bottom: 36px;
+    margin-bottom: 60px;
+    flex-basis: 47.5%;
+    overflow: hidden;
+}
+
+.site-main-docs .linkDoc:hover {
+    background-color: #f9f9f9;
+}
+
+
+
+@media (max-width: 767px) {
+    .site-main-docs .linkDoc {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        padding-top: 28px;
+        padding-bottom: 26px;
     }
 }
 

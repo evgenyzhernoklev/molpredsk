@@ -89,7 +89,7 @@
 				<a href="/register"><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/slide_register.png" /></a>
 			</div>
 			<div class="sliderBottomWrapper__rightBlock sliderBottomRightBlock">
-				<a href="https://molpredsk.ru/wp-content/uploads/2016/10/Zayavka-1.doc" download><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/send_idea.png" /></a>
+				<a href="https://molpredsk.ru/wp-content/uploads/2016/11/Zayavka-1.doc" download><img class="sliderBottomWrapper__img" src="wp-content/uploads/2016/10/send_idea.png" /></a>
 			</div>
 		</div>
 
