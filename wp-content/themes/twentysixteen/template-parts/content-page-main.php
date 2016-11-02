@@ -101,35 +101,54 @@
 							'post_type' => 'news',
 							'publish' => true,
 							'paged' => get_query_var('paged'),
-							'posts_per_page' => 2
+							'posts_per_page' => 1
 					 	);
-
 				query_posts($args);
-
 				while ( have_posts() ) : the_post();
-
 			?>
-
 				<article class="colFlex colFlex--2" id="post-<?php the_ID(); ?>" >
 					<?php if ( has_post_thumbnail() ) { ?>
 						<a class="colFlexImgWrapper post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 						</a>
 					<?php } ?>
-
 					<p class="colsFlexGrid__section">Новости</p>
-
 					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
 					<div class="colFlexExcerpt">
 						<?php the_excerpt(); ?>
 					</div>
 				</article>
+			<?php
+				endwhile;
+				wp_reset_query();
+			?>
+
+
 
 			<?php
-
+				$args = array(
+							'post_type' => 'media',
+							'publish' => true,
+							'paged' => get_query_var('paged'),
+							'posts_per_page' => 1
+					 	);
+				query_posts($args);
+				while ( have_posts() ) : the_post();
+			?>
+				<article class="colFlex colFlex--2" id="post-<?php the_ID(); ?>" >
+					<?php if ( has_post_thumbnail() ) { ?>
+						<a class="colFlexImgWrapper post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+						</a>
+					<?php } ?>
+					<p class="colsFlexGrid__section">СМИ о нас</p>
+					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					<div class="colFlexExcerpt">
+						<?php the_excerpt(); ?>
+					</div>
+				</article>
+			<?php
 				endwhile;
-
 				wp_reset_query();
 			?>
 		</div>
