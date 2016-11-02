@@ -117,6 +117,8 @@
 						</a>
 					<?php } ?>
 
+					<p class="colsFlexGrid__section">Новости</p>
+
 					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<div class="colFlexExcerpt">

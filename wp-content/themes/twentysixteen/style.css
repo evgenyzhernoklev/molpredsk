@@ -4741,6 +4741,14 @@ p > video {
 
 
 
+/* news */
+.colsFlexGrid__section {
+    margin-bottom: 14px;
+    color: #FF0000;
+    font: 16px/21px 'Intro', sans-serif;
+}
+
+
 @media (max-width: 992px) {
     .videoWrapper {
         height: 480px;
