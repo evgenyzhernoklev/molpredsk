@@ -4754,6 +4754,10 @@ p > video {
     border: 0;
 }
 
+.colsFlexGrid__section a:hover {
+    color: #686868;
+}
+
 
 @media (max-width: 992px) {
     .videoWrapper {
