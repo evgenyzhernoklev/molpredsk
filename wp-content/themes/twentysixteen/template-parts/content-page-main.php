@@ -93,8 +93,20 @@
 			</div>
 		</div>
 
-		<h3 class="subTitle"><span>Новости</span> <a class="subTitle__link" href="/news/">СМОТРеть ВСЕ НОВОСТИ ></a></h3>
+		<?php
+		the_content();
 
+		wp_link_pages( array(
+			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
+			'after'       => '</div>',
+			'link_before' => '<span>',
+			'link_after'  => '</span>',
+			'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
+			'separator'   => '<span class="screen-reader-text">, </span>',
+		) );
+		?>
+
+		<h3 class="subTitle"><span>Новости</span> <a class="subTitle__link" href="/news/">СМОТРеть ВСЕ НОВОСТИ ></a></h3>
 		<div class="colsFlex colsFlexGrid">
 			<?php
 				$args = array(
@@ -212,19 +224,6 @@
 			?>
 		</div>
 
-
-		<?php
-		the_content();
-
-		wp_link_pages( array(
-			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
-			'after'       => '</div>',
-			'link_before' => '<span>',
-			'link_after'  => '</span>',
-			'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
-			'separator'   => '<span class="screen-reader-text">, </span>',
-		) );
-		?>
 	</div><!-- .entry-content -->
 
 	<?php
