@@ -93,6 +93,8 @@
 			</div>
 		</div>
 
+		<h3 class="subTitle"><span>Новости</span> <a class="subTitle__link" href="/news/">СМОТРеть ВСЕ НОВОСТИ ></a></h3>
+		
 
 
 		<?php

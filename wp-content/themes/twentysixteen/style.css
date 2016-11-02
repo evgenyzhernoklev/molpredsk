@@ -4146,7 +4146,17 @@ p > video {
     font: 32px/40px 'Intro', sans-serif;
 }
 
+.subTitle .subTitle__link {
+    border: 0;
+}
 
+.subTitle__link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #FF0000;
+    text-decoration: none;
+    font-size: 16px;
+}
 
 @media (max-width: 1200px) {
     .site-header,
@@ -4684,6 +4694,7 @@ p > video {
 /****************************** main page content ******************************/
 .home .subTitle {
     color: #007acc;
+    font-size: 36px;
 }
 
 .videoWrapper {
