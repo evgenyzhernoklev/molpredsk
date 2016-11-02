@@ -224,6 +224,24 @@
 			?>
 		</div>
 
+
+
+		<h3 class="subTitle"><span>Истории успеха</span> <a class="subTitle__link" href="/stories/">ЭТИ и другие истории успеха ></a></h3>
+		<div class="sliderBottomWrapper sliderBottomWrapper--stories">
+			<div class="sliderBottomWrapper__slider sliderBottom">
+				<div class="sliderBottom__slide slideBottom" data-href="">
+					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
+						<p class="slideBottomInfoWrapper__name">МИХАИЛ АПАРИН:</p>
+						<p class="slideBottomInfoWrapper__quoute">«Деньги не главное!»</p>
+						<p class="slideBottomInfoWrapper__place">ООО «Хороший Цех»</p>
+					</div>
+					<div class="slideBottom__img slideBottom__img--story1"></div>
+				</div>
+
+			</div>
+		</div>
+
+
 	</div><!-- .entry-content -->
 
 	<?php
