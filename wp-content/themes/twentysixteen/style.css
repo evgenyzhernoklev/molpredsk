@@ -4812,6 +4812,14 @@ p > video {
     background-image: url('../../uploads/2016/11/chizhov.jpg');
 }
 
+.slideBottom__img--story3 {
+    background-image: url('../../uploads/2016/11/schegolkova.jpg');
+}
+
+.slideBottom__img--story4 {
+    background-image: url('../../uploads/2016/11/suyazova.jpg');
+}
+
 
 @media (max-width: 992px) {
     .videoWrapper {

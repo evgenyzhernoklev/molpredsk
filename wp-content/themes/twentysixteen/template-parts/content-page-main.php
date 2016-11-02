@@ -229,14 +229,14 @@
 		<h3 class="subTitle"><span>Истории успеха</span> <a class="subTitle__link" href="/stories/">ЭТИ и другие истории успеха ></a></h3>
 		<div class="sliderBottomWrapper sliderBottomWrapper--stories">
 			<div class="sliderBottomWrapper__slider sliderBottom">
-				<div class="sliderBottom__slide slideBottom" data-href="">
+				<!-- <div class="sliderBottom__slide slideBottom" data-href="">
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
 						<p class="slideBottomInfoWrapper__name">МИХАИЛ АПАРИН:</p>
 						<p class="slideBottomInfoWrapper__quoute">«Деньги не главное!»</p>
 						<p class="slideBottomInfoWrapper__place">ООО «Хороший Цех»</p>
 					</div>
 					<div class="slideBottom__img slideBottom__img--story1"></div>
-				</div>
+				</div> -->
 
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/?stories=%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0-%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D1%8F-%D1%87%D0%B8%D0%B6%D0%BE%D0%B2%D0%B0">
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
@@ -245,6 +245,24 @@
 						<p class="slideBottomInfoWrapper__place">ЧоудПДО «Играя Развиваем»<br/>ООО «УТилизация»<br/>НП «ПоСЭБ»</p>
 					</div>
 					<div class="slideBottom__img slideBottom__img--story2"></div>
+				</div>
+
+				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/?stories=iu_schegolkova">
+					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
+						<p class="slideBottomInfoWrapper__name">Элина Щеголькова:</p>
+						<p class="slideBottomInfoWrapper__quoute">«Не бойтесь! не ленитесь! не бросайте все при первой неудаче»</p>
+						<p class="slideBottomInfoWrapper__place">Студия иностранных языков «LA Studio»</p>
+					</div>
+					<div class="slideBottom__img slideBottom__img--story3"></div>
+				</div>
+
+				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/?stories=story_mind">
+					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
+						<p class="slideBottomInfoWrapper__name">Анна Суязова:</p>
+						<p class="slideBottomInfoWrapper__quoute">«больше креативить, независимо от того, в какой сфере бизнес»</p>
+						<p class="slideBottomInfoWrapper__place">Детский центр гармоничного развития «Точка роста»</p>
+					</div>
+					<div class="slideBottom__img slideBottom__img--story4"></div>
 				</div>
 			</div>
 		</div>
