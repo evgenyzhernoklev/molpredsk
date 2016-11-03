@@ -32,33 +32,24 @@
 
 		<div class="sliderBottomWrapper">
 			<div class="sliderBottomWrapper__slider sliderBottom">
-				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C-%D0%BA%D1%80%D0%B5%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85-%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B0%D0%BF%D0%BE%D0%B2/">
+				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C-%D0%BA%D1%80%D0%B5%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85-%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B0%D0%BF%D0%BE%D0%B2/">
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
 						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
 							<div class="slideBottomInfoTable__cell">Фестиваль<br/>
-								Креативных<br/>Стартапов<br/>11-13 ноября</div>
+								Креативных<br/>Стартапов<br/>11 - 13 ноября</div>
 						</div>
 					</div>
 					<div class="slideBottom__img slideBottom__img--1"></div>
 				</div>
-				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/biznes_idea/">
-					<div class="slideBottom__img slideBottom__img--2"></div>
-					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
-						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
-							<div class="slideBottomInfoTable__cell">Конкурс<br/>на лучшую<br/>
-								Бизнес-идею<br/>31 октября</div>
-						</div>
-					</div>
-				</div>
-				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/бизнес-зарница/">
-					<div class="slideBottom__img slideBottom__img--3"></div>
+				<div class="sliderBottom__slide slideBottom" data-href="">
+					<div class="slideBottom__img slideBottom__img--7"></div>
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper slideBottomInfoWrapper--red">
 						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
-							<div class="slideBottomInfoTable__cell">БИЗнес-ЗАРНИЦА<br/>29 октября</div>
+							<div class="slideBottomInfoTable__cell">Итоговый форум молодых<br/>предпринимателей<br/>7 декабря</div>
 						</div>
 					</div>
 				</div>
-				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/бизнесиада/">
+				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B8%D0%B0%D0%B4%D0%B0/">
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper slideBottomInfoWrapper--red">
 						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
 							<div class="slideBottomInfoTable__cell">БИЗНЕСИАДА<br/>25 ноября</div>
@@ -66,23 +57,14 @@
 					</div>
 					<div class="slideBottom__img slideBottom__img--4"></div>
 				</div>
-				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B9-%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-%D1%80%D0%BE/">
+				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B9-%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-%D1%80%D0%BE/">
 					<div class="slideBottom__img slideBottom__img--5"></div>
 					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
 						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
 							<div class="slideBottomInfoTable__cell">Молодой<br/>
-								Предприниматель<br/>РОссии 2016<br/>28 октября</div>
+								Предприниматель<br/>РОссии 2016<br/>3 ноября</div>
 						</div>
 					</div>
-				</div>
-				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/events/%D0%B4%D0%B5%D0%BB%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B8%D0%B3%D1%80%D1%8B-%D0%B4%D0%BB%D1%8F-%D1%81%D1%82%D0%B0%D1%80%D1%88%D0%B5%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2/">
-					<div class="slideBottom__infoWrapper slideBottomInfoWrapper">
-						<div class="slideBottomInfoWrapper__table slideBottomInfoTable">
-							<div class="slideBottomInfoTable__cell">Деловые игры<br/>
-								для старшеклас-<br/>сников<br/>27 октября</div>
-						</div>
-					</div>
-					<div class="slideBottom__img slideBottom__img--6"></div>
 				</div>
 			</div>
 			<div class="sliderBottomWrapper__leftBlock sliderBottomLeftBlock">

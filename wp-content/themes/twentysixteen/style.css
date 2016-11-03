@@ -842,9 +842,8 @@ a:active {
 	color: #504848;
 	display: block;
 	height: 81px;
-	line-height: 1.3125;
+	line-height: 81px;
 	outline: 0;
-	padding: 0.84375em 0;
     font-family: 'intro', sans-serif;;
     font-size: 15px;
     color: #414141;
@@ -2989,12 +2988,7 @@ p > video {
 		border: 0;
 	}
 
-	.main-navigation .primary-menu > li {
-		float: left;
-	}
-
 	.main-navigation a {
-		padding: 33px 30px 25px;
 		white-space: nowrap;
 	}
 
@@ -4202,14 +4196,28 @@ p > video {
 
 
 /****************************** menu ******************************/
-@media (max-width: 1200px) {
-    .site-header-menu {
-        /*padding-left: 20px;*/
-    }
+.site-header-menu {
+    width: 100%;
+}
 
+.primary-menu {
+    font-size: 0;
+    line-height: 0;
+    text-align: justify;
+}
+
+.primary-menu:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.primary-menu > li {
+    display: inline-block;
+}
+
+@media (max-width: 1200px) {
     .main-navigation a {
-        padding-left: 20px;
-        padding-right: 20px;
         font-size: 14px;
     }
 
@@ -4222,15 +4230,6 @@ p > video {
 
 
 @media (max-width: 992px) {
-    .site-header-menu {
-        padding-left: 10px;
-    }
-
-    .main-navigation a {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
     .custom-logo-link {
         padding-right: 20px;
         padding-left: 15px;
@@ -4247,7 +4246,6 @@ p > video {
 
     .main-navigation a {
         height: auto;
-        padding: 18px 0 15px;
     }
 
     .main-navigation li:first-child {
@@ -4610,6 +4608,10 @@ p > video {
 
 .slideBottom__img--6 {
     background-image: url('../../uploads/2016/10/slide_bottom6.jpg');
+}
+
+.slideBottom__img--7 {
+    background-image: url('../../uploads/2016/11/slide_bottom7.jpg');
 }
 
 
