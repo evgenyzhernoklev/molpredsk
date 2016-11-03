@@ -9,7 +9,7 @@ get_header(); ?>
 	<main id="main" class="site-main site-main-titleNoImg site-main-docs" role="main">
 		<h1 class="entry-title linkTabTitle">
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
-			<a class="linkTab" href="/library/">Библиотека начинающего предпринимателя</a>
+			<a class="linkTab" href="<?php echo get_permalink( 458 ); ?>">Библиотека начинающего предпринимателя</a>
 		</h1>
 
 		<?php

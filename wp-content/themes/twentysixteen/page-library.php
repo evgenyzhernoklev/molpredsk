@@ -8,7 +8,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main site-main-titleNoImg site-main-docs" role="main">
 		<h1 class="entry-title linkTabTitle">
-			<a class="linkTab" href="/docs/">Документы</a>
+			<a class="linkTab" href="<?php echo get_permalink( 389 ); ?>">Документы</a>
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
 		</h1>
 

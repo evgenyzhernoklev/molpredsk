@@ -93,20 +93,9 @@
 			</div>
 		</div>
 
-		<?php
-		the_content();
+		<?php the_content(); ?>
 
-		wp_link_pages( array(
-			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
-			'after'       => '</div>',
-			'link_before' => '<span>',
-			'link_after'  => '</span>',
-			'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
-			'separator'   => '<span class="screen-reader-text">, </span>',
-		) );
-		?>
-
-		<h3 class="subTitle"><span>Новости</span> <a class="subTitle__link" href="/news/">СМОТРеть ВСЕ НОВОСТИ ></a></h3>
+		<h3 class="subTitle"><span>Новости</span> <a class="subTitle__link" href="<?php echo get_permalink( 248 ); ?>">СМОТРеть ВСЕ НОВОСТИ ></a></h3>
 		<div class="colsFlex colsFlexGrid">
 			<?php
 				$args = array(
@@ -124,7 +113,7 @@
 							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 						</a>
 					<?php } ?>
-					<p class="colsFlexGrid__section"><a href="/news/">Новости</a></p>
+					<p class="colsFlexGrid__section"><a href="<?php echo get_permalink( 248 ); ?>">Новости</a></p>
 					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 					<div class="colFlexExcerpt">
 						<?php the_excerpt(); ?>
@@ -153,7 +142,7 @@
 							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 						</a>
 					<?php } ?>
-					<p class="colsFlexGrid__section"><a href="/media/">СМИ о нас</a></p>
+					<p class="colsFlexGrid__section"><a href="<?php echo get_permalink( 290 ); ?>">СМИ о нас</a></p>
 					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 					<div class="colFlexExcerpt">
 						<?php the_excerpt(); ?>
@@ -182,7 +171,7 @@
 							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 						</a>
 					<?php } ?>
-					<p class="colsFlexGrid__section"><a href="/stories/">Истории успеха</a></p>
+					<p class="colsFlexGrid__section"><a href="<?php echo get_permalink( 412 ); ?>">Истории успеха</a></p>
 					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 					<div class="colFlexExcerpt">
 						<?php the_excerpt(); ?>
@@ -212,7 +201,7 @@
 							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 						</a>
 					<?php } ?>
-					<p class="colsFlexGrid__section"><a href="/news/">Новости</a></p>
+					<p class="colsFlexGrid__section"><a href="<?php echo get_permalink( 248 ); ?>">Новости</a></p>
 					<?php the_title( sprintf( '<h2 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 					<div class="colFlexExcerpt">
 						<?php the_excerpt(); ?>
@@ -226,7 +215,7 @@
 
 
 
-		<h3 class="subTitle"><span>Истории успеха</span> <a class="subTitle__link" href="/stories/">ЭТИ и другие истории успеха ></a></h3>
+		<h3 class="subTitle"><span>Истории успеха</span> <a class="subTitle__link" href="<?php echo get_permalink( 412 ); ?>">ЭТИ и другие истории успеха ></a></h3>
 		<div class="sliderBottomWrapper sliderBottomWrapper--stories">
 			<div class="sliderBottomWrapper__slider sliderBottom">
 				<div class="sliderBottom__slide slideBottom" data-href="https://molpredsk.ru/?stories=%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D1%83%D1%81%D0%BF%D0%B5%D1%85%D0%B0-%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%B0-%D0%B0%D0%BF%D0%B0%D1%80%D0%B8%D0%BD%D0%B0">

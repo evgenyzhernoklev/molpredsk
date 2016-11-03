@@ -796,6 +796,7 @@ a:active {
     border-bottom: 1px solid #007acc;
 }
 
+.home .entry-content a,
 .entry-content a:hover {
     border-bottom-color: transparent;
 }
@@ -5404,6 +5405,7 @@ p > video {
 
     flex-wrap: wrap;
 
+    width: 100%;
     overflow: hidden;
     zoom: 1;
 
