@@ -93,9 +93,22 @@
 			</div>
 		</div>
 
-		<?php the_content(); ?>
+		<?php //the_content(); ?>
 
 		<div class="colsFlex colsFlexGrid">
+
+
+
+			<article class="colFlex colFlex--2" id="" >
+				<h3 class="subTitle">Наш ВИДЕОПОТОК</h3>
+
+				<div class="videoWrapper">
+				    <div class="videoWrapper__poster"></div><iframe width="100%" height="600px" src="https://www.youtube.com/embed/videoseries?list=PLoWSSX1cM6GAh7kLN2DWpK6uP3ShXi5ys" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</article>
+
+
+
 			<?php
 				$args = array(
 							'post_type' => 'galleries',
