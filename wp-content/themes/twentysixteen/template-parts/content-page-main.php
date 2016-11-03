@@ -95,6 +95,34 @@
 
 		<?php the_content(); ?>
 
+		<div class="colsFlex colsFlexGrid">
+			<?php
+				$args = array(
+							'post_type' => 'galleries',
+							'publish' => true,
+							'paged' => get_query_var('paged'),
+							'posts_per_page' => 1
+					 	);
+				query_posts($args);
+				while ( have_posts() ) : the_post();
+			?>
+				<article class="colFlex colFlex--2" id="post-<?php the_ID(); ?>" >
+					<h3 class="subTitle"><span>Фото</span> <a class="subTitle__link" href="<?php echo get_permalink( 485 ); ?>">СМОТРеть ВСЕ видео/фото ></a></h3>
+
+					<?php if ( has_post_thumbnail() ) { ?>
+						<a class="colFlexImgWrapper post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+							<?php the_post_thumbnail( 'large', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+						</a>
+					<?php } ?>
+				</article>
+			<?php
+				endwhile;
+				wp_reset_query();
+			?>
+		</div>
+
+
+
 		<h3 class="subTitle"><span>Новости</span> <a class="subTitle__link" href="<?php echo get_permalink( 248 ); ?>">СМОТРеть ВСЕ НОВОСТИ ></a></h3>
 		<div class="colsFlex colsFlexGrid">
 			<?php
