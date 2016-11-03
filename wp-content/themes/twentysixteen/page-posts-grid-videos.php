@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Список постов "Фото"
+ Template Name: Список постов "Видео"
 */
 
 get_header(); ?>
@@ -8,14 +8,14 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main site-main-titleNoImg" role="main">
 		<h1 class="entry-title linkTabTitle">
+			<a class="linkTab" href="<?php echo get_permalink( 485 ); ?>">Фото</a>
 			<span class="linkTab linkTab--active"><?php the_title() ?></span>
-			<a class="linkTab" href="<?php echo get_permalink( 489 ); ?>">Видео</a>
 		</h1>
 
 		<div class="colsFlex colsFlexGrid">
 			<?php
 				$args = array(
-							'post_type' => 'galleries',
+							'post_type' => 'videos',
 							'publish' => true,
 							'paged' => get_query_var('paged'),
 							'posts_per_page' => 6

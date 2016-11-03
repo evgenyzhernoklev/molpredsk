@@ -272,6 +272,56 @@ function sk_galleries(){
 
 
 
+// galleries
+add_action('init', 'sk_videos');
+function sk_videos(){
+	$labels = array(
+				'name' => 'Видео',
+				'singular_name' => 'Видео',
+				'menu_name' => 'Видео',
+				'all_items' => 'Все видео',
+				'add_new' => 'Добавить свежее',
+				'add_new_item' => 'Добавить свежее видео',
+				'edit_item' => 'Редактировать видео',
+				'view_item' => 'Посмотреть видео',
+				'search_items' => 'Найти видео',
+				'not_found' =>  'Видео не найдено',
+				'not_found_in_trash' => 'В корзине видео не найдено'
+			);
+	$supports = array(
+				'title',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'custom-fields',
+				'revisions',
+			);
+	$args = array(
+				'labels' => $labels,
+				'public' => true,
+				'hierarchical' => false,
+				'supports' => $supports,
+				'show_ui' => true,
+				'show_in_admin_bar' => true,
+				'show_in_menu' => true,
+				'menu_position' => 6,
+				'menu_icon' => 'dashicons-format-video',
+				'taxonomies' => array(
+					// 'category',
+					// 'post_tag'
+					),
+				'has_archive' => false,
+				'can_export' => true,
+				'query_var' => true,
+				// 'register_meta_box_cb' => 'название_callback_функции',
+				'capability_type' => 'post',
+				'rewrite' => false
+			);
+	register_post_type('videos',$args);
+}
+
+
+
 // smi about us
 add_action( 'init', 'create_smi_about' );
 function create_smi_about(){

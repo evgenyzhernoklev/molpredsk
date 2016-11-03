@@ -95,17 +95,28 @@
 
 		<?php //the_content(); ?>
 
-		<div class="colsFlex colsFlexGrid">
-
-
-
-			<article class="colFlex colFlex--2" id="" >
-				<h3 class="subTitle">Наш ВИДЕОПОТОК</h3>
-
-				<div class="videoWrapper">
-				    <div class="videoWrapper__poster"></div><iframe width="100%" height="600px" src="https://www.youtube.com/embed/videoseries?list=PLoWSSX1cM6GAh7kLN2DWpK6uP3ShXi5ys" frameborder="0" allowfullscreen></iframe>
-				</div>
-			</article>
+		<div class="colsFlex colsFlexGrid colsFlexGrid--video">
+			<?php
+				$args = array(
+							'post_type' => 'videos',
+							'publish' => true,
+							'paged' => get_query_var('paged'),
+							'posts_per_page' => 1
+					 	);
+				query_posts($args);
+				while ( have_posts() ) : the_post();
+			?>
+				<article class="colFlex colFlex--2" id="post-<?php the_ID(); ?>" >
+					<h3 class="subTitle">Наш ВИДЕОПОТОК</h3>
+					<div class="videoWrapper colFlexImgWrapper">
+						<div class="videoWrapper__poster"></div>
+						<?php the_content(); ?>
+					</div>
+				</article>
+			<?php
+				endwhile;
+				wp_reset_query();
+			?>
 
 
 
