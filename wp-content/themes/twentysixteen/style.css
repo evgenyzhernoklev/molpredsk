@@ -5443,11 +5443,16 @@ p > video {
 		display: none;
 		position: fixed;
 		z-index: 10000;
-		top: 10%;
+		top: 15%;
 		left: 50%;
 		width: 800px;
 		margin-left: -400px;
 		background: #fff;
+}
+
+.sliderHelper {
+	height: 500px;
+	verflow: hidden;
 }
 
 .sliderGallery__prev,
@@ -5474,7 +5479,9 @@ p > video {
 }
 
 .sliderGallerySlide img {
-	width: 100%;
+	width: auto;
+  max-height: 100%;
+  margin: 0 auto;
 }
 
 .sliderGallerySlide p {

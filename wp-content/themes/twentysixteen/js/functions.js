@@ -244,7 +244,10 @@
 				var slide = $gallerySlides.eq(i).data('large'),
 						alt = $gallerySlides.eq(i).attr('alt');
 				gallerySlides += '<div class="sliderGallerySlide">' +
-														slide + '<p>' + alt + '</p>' +
+														'<div class="sliderHelper">' +
+															slide +
+														'</div>' +
+														'<p>' + alt + '</p>' +
 													'</div>';
 			}
 
