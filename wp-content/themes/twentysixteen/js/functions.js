@@ -213,21 +213,6 @@
 			});
 		}
 
-		// var $bottomSlider = $('.sliderBottom');
-		// if ($bottomSlider.length) {
-		// 	$bottomSlider.slick({
-		// 		infinite: true,
-		// 		slidesToShow: 1,
-		// 		slidesToScroll: 1,
-		// 		arrows: false,
-		// 		autoplay: true,
-		// 		autoplaySpeed: 5000,
-		// 		draggable: false,
-		// 		pauseOnHover: false,
-		// 		accessibility: false
-		// 	});
-		// }
-
 		$('.slideBottom').on('click', function(e) {
 			e.preventDefault();
 			var target = $(this).data('href');

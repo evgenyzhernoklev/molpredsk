@@ -113,6 +113,9 @@ if( $sliderheight ) {
 			if ($slidercdesign == 'design-molpred-stories') {
 					$custom_slider_class = 'sliderBottomWrapper__slider sliderBottom';
 					echo '<div class="sliderBottomWrapper sliderBottomWrapper--stories">';
+			} elseif ($slidercdesign == 'design-molpred-events') {
+					$custom_slider_class = 'sliderBottomWrapper__slider sliderBottom';
+					echo '<div class="sliderBottomWrapper">';
 			}
 			?>
 
@@ -140,6 +143,9 @@ if( $sliderheight ) {
           case "design-molpred-stories":
 					include('designs/design-molpred-stories.php');
 					break;
+					case "design-molpred-events":
+					include('designs/design-molpred-events.php');
+					break;
 				 default:
 
 						include('designs/design-1.php');
@@ -151,7 +157,7 @@ if( $sliderheight ) {
 		  </div><!-- #post-## -->
 
 			<?php
-			if ($slidercdesign == 'design-molpred-stories') {
+			if ($slidercdesign == 'design-molpred-stories' || $slidercdesign == 'design-molpred-events') {
 					echo '</div>';
 			}
 			?>
