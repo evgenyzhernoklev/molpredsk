@@ -1,113 +1,123 @@
-<?php 
-function get_wpsisac_slider( $atts, $content = null ){          
+<?php
+function get_wpsisac_slider( $atts, $content = null ){
 
       extract(shortcode_atts(array(
 	    "limit"    => '',
 		"category" => '',
 		"design" => '',
-		"show_content" => '',       
+		"show_content" => '',
 		"dots"     			=> '',
 		"arrows"     		=> '',
-		"autoplay"     		=> '',	
+		"autoplay"     		=> '',
 		"autoplay_interval"  => '',
 		"speed"             => '',
 		"fade"		        => '',
 		"sliderheight"     => '',
-		
+
 
 	), $atts));
-	
+
 	// required enqueue
 	wp_enqueue_script( 'wpos-slick-jquery' );
-	 
-    if( $limit ) { 
-		$posts_per_page = $limit; 
+
+    if( $limit ) {
+		$posts_per_page = $limit;
 	} else {
 		$posts_per_page = '-1';
 	}
-	
-	if( $category ) { 
-		$cat = $category; 
+
+	if( $category ) {
+		$cat = $category;
 	} else {
 		$cat = '';
-	}	
+	}
 
-	if( $design ) { 
-		$slidercdesign = $design; 
+	if( $design ) {
+		$slidercdesign = $design;
 	} else {
 		$slidercdesign = 'design-1';
-	}	
+	}
 
-    if( $show_content ) { 
-        $showContent = $show_content; 
+    if( $show_content ) {
+        $showContent = $show_content;
     } else {
         $showContent = 'true';
     }
 
 
-	if( $dots ) { 
-		$dotsv = $dots; 
+	if( $dots ) {
+		$dotsv = $dots;
 	} else {
 		$dotsv = 'true';
 	}
 
 	if( $arrows ) {
-		$arrowsv = $arrows; 
+		$arrowsv = $arrows;
 	} else {
 		$arrowsv = 'true';
-	}	
+	}
 
-	if( $autoplay ) { 
+	if( $autoplay ) {
 		$autoplayv = $autoplay;
 	} else {
 		$autoplayv = 'true';
-	}	
+	}
 
-	if( $autoplay_interval ) { 
-		$autoplayIntervalv = $autoplay_interval; 
+	if( $autoplay_interval ) {
+		$autoplayIntervalv = $autoplay_interval;
 	} else {
 		$autoplayIntervalv = '3000';
-	}	
+	}
 
-	if( $speed ) { 
+	if( $speed ) {
 		$speedv = $speed;
 	} else {
 		$speedv = '300';
 	}
-	if( $fade ) { 
+	if( $fade ) {
 		$fadev = $fade;
 	} else {
 		$fadev = 'false';
 	}
-if( $sliderheight ) { 
+if( $sliderheight ) {
 		$sliderheightv = $sliderheight;
 	} else {
 		$sliderheightv = '500';
 	}
 
-	ob_start();	
+	ob_start();
 
 	$unique 		= wpsisac_get_unique();
 	$post_type 		= 'slick_slider';
 	$orderby 		= 'post_date';
-	$order 			= 'DESC';		
+	$order 			= 'DESC';
 
-        $args = array ( 
-            'post_type'      => $post_type, 
-            'orderby'        => $orderby, 
+        $args = array (
+            'post_type'      => $post_type,
+            'orderby'        => $orderby,
             'order'          => $order,
-            'posts_per_page' => $posts_per_page,  
-           
+            'posts_per_page' => $posts_per_page,
+
             );
 	if($cat != ""){
             	$args['tax_query'] = array( array( 'taxonomy' => 'wpsisac_slider-category', 'field' => 'id', 'terms' => $cat) );
-            }        
+            }
       $query = new WP_Query($args);
-      $post_count = $query->post_count;         
+      $post_count = $query->post_count;
 
              if ( $query->have_posts() ) :
 			 ?>
-		<div class="wpsisac-slick-slider-<?php echo $unique; ?> wpsisac-slick-slider <?php echo $slidercdesign; ?>">
+
+			<?php
+			$custom_slider_class = '';
+			if ($slidercdesign == 'design-molpred-stories') {
+					$custom_slider_class = 'sliderBottomWrapper__slider sliderBottom';
+					echo '<div class="sliderBottomWrapper sliderBottomWrapper--stories">';
+			}
+			?>
+
+
+			<div class="wpsisac-slick-slider-<?php echo $unique; ?> wpsisac-slick-slider <?php echo $slidercdesign; ?> <?php echo $custom_slider_class; ?>">
 				<?php while ( $query->have_posts() ) : $query->the_post();
 				global $post;
 				$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
@@ -123,11 +133,14 @@ if( $sliderheight ) {
 					break;
 				 case "design-4":
 					include('designs/design-4.php');
-					break;	
+					break;
 					case "design-5":
 					include('designs/design-5.php');
-					break;	
-				 default:		 
+					break;
+          case "design-molpred-stories":
+					include('designs/design-molpred-stories.php');
+					break;
+				 default:
 
 						include('designs/design-1.php');
 
@@ -135,11 +148,17 @@ if( $sliderheight ) {
 
 					endwhile; ?>
 
-		  </div><!-- #post-## -->		
+		  </div><!-- #post-## -->
+
+			<?php
+			if ($slidercdesign == 'design-molpred-stories') {
+					echo '</div>';
+			}
+			?>
 
 		  <?php
-            endif; 
-             wp_reset_query(); 	
+            endif;
+            wp_reset_query();
 ?>
 
 <script type="text/javascript">
@@ -151,22 +170,22 @@ if( $sliderheight ) {
 			infinite: true,
 			arrows: <?php echo $arrowsv; ?>,
 			speed: <?php echo $speedv; ?>,
-			autoplay: <?php echo $autoplayv; ?>,				
+			autoplay: <?php echo $autoplayv; ?>,
 			fade: <?php echo $fadev; ?>,
 			autoplaySpeed: <?php echo $autoplayIntervalv; ?>,
 
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			adaptiveHeight: false
-			
 
-			
+
+
 });
 	});
 
-	</script>				 
+	</script>
 <?php
-		return ob_get_clean();			             
+		return ob_get_clean();
 
 	}
 
