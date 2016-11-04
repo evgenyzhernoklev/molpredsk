@@ -5422,3 +5422,62 @@ p > video {
 
 
 /****************************** galleries template ******************************/
+.postLinksContent .gallery-item img {
+	cursor: pointer;
+}
+
+.popup_overlay {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0, 0.8);
+		cursor: pointer;
+}
+
+
+.sliderGalleryWrapper {
+		display: none;
+		position: fixed;
+		z-index: 10000;
+		top: 10%;
+		left: 50%;
+		width: 800px;
+		margin-left: -400px;
+		background: #fff;
+}
+
+.sliderGallery__prev,
+.sliderGallery__next {
+	display: inline-block;
+	font: 60px/60px 'Intro', sans-serif;
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	margin-top: -30px;
+	color: #fff;
+	z-index: 10;
+	cursor: pointer;
+	text-shadow: 0px 0px 10px black;
+}
+
+.sliderGallery__next {
+	left: auto;
+	right: 20px;
+}
+
+.sliderGallerySlide {
+
+}
+
+.sliderGallerySlide img {
+	width: 100%;
+}
+
+.sliderGallerySlide p {
+	margin: 0;
+	padding: 10px 20px;
+}

@@ -1745,7 +1745,9 @@ function gallery_shortcode( $attr ) {
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
 
-		$attr = ( trim( $attachment->post_excerpt ) ) ? array( 'aria-describedby' => "$selector-$id" ) : '';
+		$image_output_large = wp_get_attachment_image( $id, 'large', true );
+
+		$attr = ( trim( $attachment->post_excerpt ) ) ? array( 'aria-describedby' => "$selector-$id", 'data-large' => "$image_output_large" ) : array( 'data-large' => "$image_output_large" );
 		if ( ! empty( $atts['link'] ) && 'file' === $atts['link'] ) {
 			$image_output = wp_get_attachment_link( $id, $atts['size'], false, false, false, $attr );
 		} elseif ( ! empty( $atts['link'] ) && 'none' === $atts['link'] ) {

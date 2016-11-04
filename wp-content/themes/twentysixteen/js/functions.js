@@ -230,5 +230,65 @@
 			$(this).find('.videoWrapper__poster').fadeOut(300);
 			$videoFrame.attr('src', videoSRC + '&autoplay=1');
 		});
+
+
+
+		// galleries in material
+		var $gallery = $('.postLinksContent .gallery');
+		if ($gallery.length) {
+			var $gallerySlides = $gallery.find('img'),
+					gallerySlidesLength = $gallerySlides.length,
+					gallerySlides = '';
+
+			for (var i = 0; i < $gallerySlides.length; i++) {
+				var slide = $gallerySlides.eq(i).data('large'),
+						alt = $gallerySlides.eq(i).attr('alt');
+				gallerySlides += '<div class="sliderGallerySlide">' +
+														slide + '<p>' + alt + '</p>' +
+													'</div>';
+			}
+
+			var gallerySlider = '<div class="sliderGalleryWrapper">' +
+												'<div class="sliderGallery">' +
+													gallerySlides +
+												'</div>' +
+											'</div>',
+					$gallerySlider = $(gallerySlider);
+
+			$('body').append('<div class="popup_overlay"></div>');
+			$('body').append($gallerySlider);
+			$popupOverlay = $('.popup_overlay');
+
+			$gallerySlides.on('click', function(e) {
+				e.preventDefault();
+				$popupOverlay.fadeIn(300);
+				$gallerySlider.fadeIn(800);
+				var startingSlide = $gallerySlides.index($(this));
+
+				$gallerySlider.find('.sliderGallery').slick({
+					infinite: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: true,
+					autoplay: false,
+					draggable: false,
+					pauseOnHover: false,
+					accessibility: true,
+					prevArrow: '<span class="sliderGallery__prev"><</span>',
+					nextArrow: '<span class="sliderGallery__next">></span>',
+					initialSlide: startingSlide
+				});
+			});
+
+			$popupOverlay.on('click', function() {
+				$gallerySlider.fadeOut(300, function() {
+					$gallerySlider.find('.sliderGallery').slick('unslick');
+				});
+				$(this).fadeOut(800);
+			});
+		}
+
+
+
 	} );
 } )( jQuery );
