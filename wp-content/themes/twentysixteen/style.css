@@ -4833,48 +4833,6 @@ p > video {
 }
 
 
-@media (max-width: 992px) {
-    /*.videoWrapper {
-        height: 480px;
-    }
-
-    .videoWrapper iframe {
-        height: 480px!important;
-    }*/
-}
-
-@media (max-width: 767px) {
-    /*.videoWrapper {
-        height: 420px;
-    }
-
-    .videoWrapper iframe {
-        height: 420px!important;
-    }*/
-}
-
-@media (max-width: 540px) {
-    /*.videoWrapper {
-        height: 320px;
-    }
-
-    .videoWrapper iframe {
-        height: 320px!important;
-    }*/
-}
-
-@media (max-width: 420px) {
-    /*.videoWrapper {
-        height: 270px;
-    }
-
-    .videoWrapper iframe {
-        height: 270px!important;
-    }*/
-}
-
-
-
 
 /****************************** post list ******************************/
 .headerEvents {
@@ -5460,3 +5418,7 @@ p > video {
 .site-main-titleNoImg .entry-title {
     margin-bottom: 32px;
 }
+
+
+
+/****************************** galleries template ******************************/
