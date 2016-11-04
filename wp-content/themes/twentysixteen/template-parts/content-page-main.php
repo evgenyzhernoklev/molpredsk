@@ -214,9 +214,7 @@
 		</div>
 
 		<h3 class="subTitle"><span>Истории успеха</span> <a class="subTitle__link" href="<?php echo get_permalink( 412 ); ?>">ЭТИ и другие истории успеха ></a></h3>
-		<div class="sliderBottomWrapper">
-			<?php echo do_shortcode('[slick-slider design="design-molpred-stories" category="8" dots="false" arrows="false" autoplay="true" autoplay_interval="5000"]'); ?>
-		</div>
+		<?php echo do_shortcode('[slick-slider design="design-molpred-stories" category="8" dots="false" arrows="false" autoplay="true" autoplay_interval="5000"]'); ?>
 
 	</div><!-- .entry-content -->
 
