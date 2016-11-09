@@ -2480,8 +2480,7 @@ body.search-no-results .page-header {
 
 .entry-content a img,
 .entry-summary a img,
-.comment-content a img,
-.textwidget a img {
+.comment-content a img {
 	display: block;
 }
 
