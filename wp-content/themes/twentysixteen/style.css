@@ -2626,6 +2626,26 @@ p > video {
 }
 
 
+
+@media (max-width: 767px) {
+    .gallery-columns-4 .gallery-item {
+    	max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-columns-4 .gallery-item {
+    	max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .gallery-columns-4 .gallery-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
 /**
  * 13.0 - Multisites
  */
@@ -4253,6 +4273,12 @@ p > video {
 
     .custom-logo-link {
         margin-right: 20px;
+    }
+
+
+
+    .primary-menu > li {
+        display: block;
     }
 }
 
