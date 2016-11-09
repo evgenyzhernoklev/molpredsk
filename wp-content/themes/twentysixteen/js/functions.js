@@ -205,7 +205,7 @@
 				slidesToScroll: 1,
 				arrows: false,
 				autoplay: true,
-				autoplaySpeed: 5000,
+				autoplaySpeed: 4000,
 				rtl: true,
 				draggable: false,
 				pauseOnHover: false,
