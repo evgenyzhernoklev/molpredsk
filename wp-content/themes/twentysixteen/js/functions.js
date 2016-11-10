@@ -283,8 +283,8 @@
 					draggable: false,
 					pauseOnHover: false,
 					accessibility: true,
-					prevArrow: '<span class="sliderGallery__prev"><</span>',
-					nextArrow: '<span class="sliderGallery__next">></span>',
+					prevArrow: '<span class="sliderGallery__prev"></span>',
+					nextArrow: '<span class="sliderGallery__next"></span>',
 					initialSlide: startingSlide
 				});
 			});

@@ -5522,27 +5522,31 @@ p > video {
 }
 
 .sliderHelper {
-	height: 500px;
-	verflow: hidden;
+	height: 541px;
+	overflow: hidden;
 }
 
 .sliderGallery__prev,
 .sliderGallery__next {
 	display: inline-block;
-	font: 60px/60px 'Intro', sans-serif;
+    width: 60px;
+    height: 90px;
+    margin-top: -45px;
 	position: absolute;
 	top: 50%;
-	left: 20px;
-	margin-top: -30px;
-	color: #fff;
+	left: -90px;
 	z-index: 10;
 	cursor: pointer;
-	text-shadow: 0px 0px 10px black;
+    background: url('../../uploads/2016/11/arrow_slider_right.png') no-repeat center center;
+}
+
+.sliderGallery__prev {
+    background: url('../../uploads/2016/11/arrow_slider_left.png') no-repeat center center;
 }
 
 .sliderGallery__next {
 	left: auto;
-	right: 20px;
+	right: -90px;
 }
 
 .sliderGallerySlide {
@@ -5550,9 +5554,10 @@ p > video {
 }
 
 .sliderGallerySlide img {
-	width: auto;
-  max-height: 100%;
-  margin: 0 auto;
+    margin: 0 auto;
+    width: auto;
+    max-width: none;
+    height: 100%;
 }
 
 .sliderGallerySlide p {
