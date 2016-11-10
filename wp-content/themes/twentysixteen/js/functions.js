@@ -213,6 +213,12 @@
 			});
 		}
 
+		$topSlider.on('click', function(e) {
+			e.preventDefault();
+			var target = $(this).data('href');
+			location.href = target;
+		});
+
 		$('.slideBottom').on('click', function(e) {
 			e.preventDefault();
 			var target = $(this).data('href');

@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 
-		<div class="sliderTop" dir="rtl">
+		<div class="sliderTop" dir="rtl" data-href="https://molpredsk.ru/about_program/">
 			<div class="sliderTop__slide sliderTopSlide">
 				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide11.png" /></p>
 				<p class="sliderTopSlide__caption sliderTopSlide__caption--slide1">НАЧНИ БИЗНЕС <br/>С ВДОХНОВЕНИЯ</p>

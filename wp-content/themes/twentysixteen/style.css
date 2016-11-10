@@ -4479,6 +4479,7 @@ p > video {
 
 .sliderTop {
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .sliderTopSlide {
