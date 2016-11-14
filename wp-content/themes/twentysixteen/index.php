@@ -39,7 +39,20 @@ get_header(); ?>
 						'publish' => true,
 						'paged' => get_query_var('paged'),
 						'posts_per_page' => 4,
+
+						'meta_query' => array(
+							array(
+								'key' => 'dates-meta-original',
+								'type' => 'NUMERIC'
+							),
+							array(
+
+							)
+						),
+						'meta_key' => 'dates-meta-original',
+						'orderby' => 'meta_value_num',
 						'order' => 'ASC'
+						// , 'order' => 'DESC'
 					);
 
 			query_posts($args);
