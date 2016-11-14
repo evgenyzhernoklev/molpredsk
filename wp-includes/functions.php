@@ -5539,7 +5539,7 @@ function date_meta_callback( $post ) {
 		<p><input type="text" name="year-meta-original" id="year-meta-original" value="<?php if ( isset ( $links_stored_meta['year-meta-original'] ) ) { echo $links_stored_meta['year-meta-original'][0]; } else { echo '2015'; } ?>" /></p>
 
 		<p><input type="text" name="month-number-meta-original" id="month-number-meta-original" style="display: none;" value="<?php if ( isset ( $links_stored_meta['month-number-meta-original'] ) ) echo $links_stored_meta['month-number-meta-original'][0]; ?>" /></p>
-		<p><input type="text" name="number-date-meta-original" id="number-date-meta-original" style="display: block;" value="<?php if ( isset ( $links_stored_meta['number-date-meta-original'] ) ) echo $links_stored_meta['number-date-meta-original'][0]; ?>" /></p>
+		<p><input type="text" name="number-date-meta-original" id="number-date-meta-original" style="display: none;" value="<?php if ( isset ( $links_stored_meta['number-date-meta-original'] ) ) echo $links_stored_meta['number-date-meta-original'][0]; ?>" /></p>
     </div>
 <?php
 }
