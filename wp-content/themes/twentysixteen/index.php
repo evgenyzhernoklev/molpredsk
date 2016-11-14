@@ -34,6 +34,16 @@ get_header(); ?>
 			</header>
 
 			<?php
+			$args = array(
+						'post_type' => 'post',
+						'publish' => true,
+						'paged' => get_query_var('paged'),
+						'posts_per_page' => 4,
+						'order' => 'ASC'
+					);
+
+			query_posts($args);
+
 			// Start the loop.
 			while ( have_posts() ) : the_post();
 
@@ -53,6 +63,8 @@ get_header(); ?>
 				'next_text'          => __( 'Next page', 'twentysixteen' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
+
+			wp_reset_query();
 
 			get_sidebar( 'content-bottom' );
 
