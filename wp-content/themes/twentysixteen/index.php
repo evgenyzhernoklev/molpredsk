@@ -34,19 +34,25 @@ get_header(); ?>
 			</header>
 
 			<?php
+
 			$args = array(
 						'post_type' => 'post',
 						'publish' => true,
 						'paged' => get_query_var('paged'),
-						'posts_per_page' => 4,
+						'posts_per_page' => 4
 
-						'meta_query' => array(
+						,'meta_query' => array(
+							// array(
+							// 	'key' => 'year-meta-original',
+							// 	'type' => 'NUMERIC'
+							// ),
+							// array(
+							// 	'key' => 'month-meta-original',
+							// 	'type' => 'NUMERIC'
+							// ),
 							array(
 								'key' => 'dates-meta-original',
 								'type' => 'NUMERIC'
-							),
-							array(
-								// 'key' => 'month-meta-original'
 							)
 						),
 						'meta_key' => 'dates-meta-original',
