@@ -35,29 +35,35 @@ get_header(); ?>
 
 			<?php
 
+
+			/*
+			 * Сортировка массива по двум параметрам с помощью usort()
+			 */
+			// function _usort_object_by_date($a, $b) {
+			// 	// поля по которым сортировать
+			// 	$array = array( 'month-meta-original'=>'ASC', 'dates-meta-original'=>'ASC' );
+			//
+			// 	$res = 0;
+			// 	foreach( $array as $k=>$v ){
+			// 		if( $a->$k == $b->$k ) continue;
+			//
+			// 		$res = ( $a->$k < $b->$k ) ? -1 : 1;
+			// 		if ( $v=='ASC' ) $res= -$res;
+			// 		break;
+			// 	}
+			//
+			// 	return $res;
+			// }
+
 			$args = array(
 						'post_type' => 'post',
 						'publish' => true,
 						'paged' => get_query_var('paged'),
-						'posts_per_page' => 4
+						'posts_per_page' => 10
 
-						,'meta_query' => array(
-							// array(
-							// 	'key' => 'year-meta-original',
-							// 	'type' => 'NUMERIC'
-							// ),
-							// array(
-							// 	'key' => 'month-meta-original',
-							// 	'type' => 'NUMERIC'
-							// ),
-							array(
-								'key' => 'dates-meta-original',
-								'type' => 'NUMERIC'
-							)
-						),
-						'meta_key' => 'dates-meta-original',
-						'orderby' => 'meta_value_num',
-						'order' => 'DESC'
+						, 'meta_key' => 'dates-meta-original'
+						, 'orderby' => 'meta_value_num'
+						, 'order' => 'ASC'
 					);
 
 			query_posts($args);
