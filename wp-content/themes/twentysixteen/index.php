@@ -46,13 +46,12 @@ get_header(); ?>
 								'type' => 'NUMERIC'
 							),
 							array(
-
+								// 'key' => 'month-meta-original'
 							)
 						),
 						'meta_key' => 'dates-meta-original',
 						'orderby' => 'meta_value_num',
-						'order' => 'ASC'
-						// , 'order' => 'DESC'
+						'order' => 'DESC'
 					);
 
 			query_posts($args);
