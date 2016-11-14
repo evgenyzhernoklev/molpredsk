@@ -5539,6 +5539,7 @@ function date_meta_callback( $post ) {
 		<p><input type="text" name="year-meta-original" id="year-meta-original" value="<?php if ( isset ( $links_stored_meta['year-meta-original'] ) ) { echo $links_stored_meta['year-meta-original'][0]; } else { echo '2015'; } ?>" /></p>
 
 		<p><input type="text" name="month-number-meta-original" id="month-number-meta-original" style="display: none;" value="<?php if ( isset ( $links_stored_meta['month-number-meta-original'] ) ) echo $links_stored_meta['month-number-meta-original'][0]; ?>" /></p>
+		<p><input type="text" name="number-date-meta-original" id="number-date-meta-original" style="display: block;" value="<?php if ( isset ( $links_stored_meta['number-date-meta-original'] ) ) echo $links_stored_meta['number-date-meta-original'][0]; ?>" /></p>
     </div>
 <?php
 }
@@ -5564,31 +5565,31 @@ function date_meta_save( $post_id ) {
 
 		switch ( $_POST[ 'month-meta-original' ] ) {
 			case "января":
-				update_post_meta( $post_id, 'month-number-meta-original', '1' );
+				update_post_meta( $post_id, 'month-number-meta-original', '01' );
 				break;
 			case "февраля":
-				update_post_meta( $post_id, 'month-number-meta-original', '2' );
+				update_post_meta( $post_id, 'month-number-meta-original', '02' );
 				break;
 			case "марта":
-				update_post_meta( $post_id, 'month-number-meta-original', '3' );
+				update_post_meta( $post_id, 'month-number-meta-original', '03' );
 				break;
 			case "апреля":
-				update_post_meta( $post_id, 'month-number-meta-original', '4' );
+				update_post_meta( $post_id, 'month-number-meta-original', '04' );
 				break;
 			case "мая":
-				update_post_meta( $post_id, 'month-number-meta-original', '5' );
+				update_post_meta( $post_id, 'month-number-meta-original', '05' );
 				break;
 			case "июня":
-				update_post_meta( $post_id, 'month-number-meta-original', '6' );
+				update_post_meta( $post_id, 'month-number-meta-original', '06' );
 				break;
 			case "июля":
-				update_post_meta( $post_id, 'month-number-meta-original', '7' );
+				update_post_meta( $post_id, 'month-number-meta-original', '07' );
 				break;
 			case "августа":
-				update_post_meta( $post_id, 'month-number-meta-original', '8' );
+				update_post_meta( $post_id, 'month-number-meta-original', '08' );
 				break;
 			case "сентября":
-				update_post_meta( $post_id, 'month-number-meta-original', '9' );
+				update_post_meta( $post_id, 'month-number-meta-original', '09' );
 				break;
 			case "октября":
 				update_post_meta( $post_id, 'month-number-meta-original', '10' );
@@ -5600,7 +5601,7 @@ function date_meta_save( $post_id ) {
 				update_post_meta( $post_id, 'month-number-meta-original', '12' );
 				break;
 			default:
-				update_post_meta( $post_id, 'month-number-meta-original', '1' );
+				update_post_meta( $post_id, 'month-number-meta-original', '01' );
 		}
     }
 
@@ -5610,7 +5611,18 @@ function date_meta_save( $post_id ) {
 		} else {
 			update_post_meta( $post_id, 'year-meta-original', sanitize_text_field( $_POST[ 'year-meta-original' ] ) );
 		}
+    }
 
+	if( isset( $_POST[ 'number-date-meta-original' ] ) ) {
+		$post_day = floatval( $_POST[ 'dates-meta-original' ] );
+
+		if ( $post_day < 10 ) {
+			$post_day = 0 . $post_day;
+		}
+
+		$post_number = $_POST[ 'year-meta-original' ] . $_POST[ 'month-number-meta-original' ] . $post_day;
+
+        update_post_meta( $post_id, 'number-date-meta-original', sanitize_text_field( $post_number ) );
     }
 }
 add_action( 'save_post', 'date_meta_save' );

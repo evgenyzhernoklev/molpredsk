@@ -61,7 +61,7 @@ get_header(); ?>
 						'paged' => get_query_var('paged'),
 						'posts_per_page' => 10
 
-						, 'meta_key' => 'dates-meta-original'
+						, 'meta_key' => 'number-date-meta-original'
 						, 'orderby' => 'meta_value_num'
 						, 'order' => 'ASC'
 					);
