@@ -59,7 +59,7 @@ get_header(); ?>
 						'post_type' => 'post',
 						'publish' => true,
 						'paged' => get_query_var('paged'),
-						'posts_per_page' => 10
+						'posts_per_page' => 4
 
 						, 'meta_key' => 'number-date-meta-original'
 						, 'orderby' => 'meta_value_num'
