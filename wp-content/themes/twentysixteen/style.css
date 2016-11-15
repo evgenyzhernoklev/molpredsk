@@ -5617,3 +5617,56 @@ p > video {
         left: 0px;
     }
 }
+
+
+
+/****************************** sitemap ******************************/
+.whs-wrap h2 {
+    margin-bottom: 0.5em;
+    font: 21px/30px 'Intro', sans-serif;
+}
+
+.whs-wrap ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.whs-wrap li {
+    position: relative;
+    margin-bottom: 5px;
+    padding-left: 25px;
+    list-style: none;
+}
+
+.whs-wrap li:before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    border: 1px solid #1a1a1a;
+
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.whs-wrap li:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 61.5625em) {
+    .whs-wrap h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 767px) {
+    .whs-wrap h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
