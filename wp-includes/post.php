@@ -20,7 +20,19 @@
 function create_initial_post_types() {
 	register_post_type( 'post', array(
 		'labels' => array(
-			'name_admin_bar' => _x( 'Post', 'add new on admin bar' ),
+			'name'            => 'События',
+			'singular_name'   => 'События',
+			'add_new'         => 'Добавить новое',
+			'add_new_item'    => 'Добавить новое событие',
+			'edit'            => 'Редактировать',
+			'edit_item'       => 'Редактировать событие',
+			'new_item'        => 'Новое событие',
+			'all_items'       => 'Все события',
+			'view'            => 'Посмотреть',
+			'view_item'       => 'Постмотреть событие',
+			'search_items'    => 'Найти событие',
+			'not_found'       => 'Событий не найдено',
+			'not_found_in_trash' => 'В корзине событий не найдено'
 		),
 		'public'  => true,
 		'_builtin' => true, /* internal use only. don't use this when registering your own post type. */
