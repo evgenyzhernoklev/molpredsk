@@ -839,14 +839,11 @@ a:active {
 }
 
 .main-navigation a {
-	color: #504848;
 	display: block;
 	height: 81px;
-	line-height: 81px;
-	outline: 0;
-    font-family: 'intro', sans-serif;;
-    font-size: 15px;
+    font: 15px/82px 'intro', sans-serif;;
     color: #414141;
+    outline: 0;
 }
 
 .main-navigation a:hover,
@@ -1593,6 +1590,8 @@ blockquote:after,
 }
 
 .site-header-main {
+    position: relative;
+
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -4235,6 +4234,29 @@ p > video {
     display: inline-block;
 }
 
+
+
+.main-navigation .menu-item-object-custom {
+    position: absolute;
+    top: 42px;
+    right: 0;
+}
+
+.menu-item-object-custom a {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+
+    border: 1px solid #979797;
+    background-color: transparent;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.menu-item-object-custom a:hover {
+    background-color: #f9f9f9;
+}
+
 @media (max-width: 1200px) {
     .main-navigation a {
         font-size: 14px;
@@ -4264,7 +4286,12 @@ p > video {
     }
 
     .main-navigation a {
-        height: auto;
+        height: 60px;
+        line-height: 62px;
+    }
+
+    .main-navigation a:hover {
+        background-color: #f9f9f9;
     }
 
     .main-navigation li:first-child {
@@ -4279,6 +4306,18 @@ p > video {
 
     .primary-menu > li {
         display: block;
+    }
+
+
+
+    .main-navigation .menu-item-object-custom {
+        position: static;
+    }
+
+    .menu-item-object-custom a {
+        padding: 0;
+        border: 0;
+        line-height: 62px;
     }
 }
 
