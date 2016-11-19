@@ -197,27 +197,7 @@
 		belowEntryMetaClass( 'img.size-full' );
 		belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
 
-		var $topSlider = $('.sliderTop');
-		if ($topSlider.length) {
-			$topSlider.slick({
-				infinite: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				autoplay: true,
-				autoplaySpeed: 4000,
-				rtl: true,
-				draggable: false,
-				pauseOnHover: false,
-				accessibility: false
-			});
-		}
 
-		$topSlider.on('click', function(e) {
-			e.preventDefault();
-			var target = $(this).data('href');
-			location.href = target;
-		});
 
 		$('.slideBottom').on('click', function(e) {
 			e.preventDefault();

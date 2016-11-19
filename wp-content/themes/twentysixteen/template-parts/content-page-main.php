@@ -11,24 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 
-		<div class="sliderTop" dir="rtl" data-href="https://molpredsk.ru/about_program/">
-			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide11.png" /></p>
-				<p class="sliderTopSlide__caption sliderTopSlide__caption--slide1">НАЧНИ БИЗНЕС <br/>С ВДОХНОВЕНИЯ</p>
-			</div>
-			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide2.png" /></p>
-				<p class="sliderTopSlide__caption sliderTopSlide__caption--slide2">СЕРИЯ ЯРКИХ<br/>СОБЫТИЙ</p>
-			</div>
-			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide3.png" /></p>
-				<p class="sliderTopSlide__caption sliderTopSlide__caption--slide3">повышение личной<br/>эффективности</p>
-			</div>
-			<div class="sliderTop__slide sliderTopSlide">
-				<p><img class="sliderTopSlide__img" src="wp-content/uploads/2016/10/slide4.png" /></p>
-				<p class="sliderTopSlide__caption  sliderTopSlide__caption--slide4">продвижение<br/>своего проекта</p>
-			</div>
-		</div>
+		
 
 		<div class="sliderBottomWrapper">
 			<?php echo do_shortcode('[slick-slider design="design-molpred-events" category="8" dots="true" arrows="false" autoplay="true" autoplay_interval="4000"]'); ?>
