@@ -11,7 +11,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 
-		
+		<div class="videoMainWrapper" data-href="https://molpredsk.ru/about_program/">
+			<video width="100%" autoplay loop>
+				<source src="wp-content/themes/twentysixteen/video/main.mp4" type="video/mp4">
+				<!-- <source src="video/main.ogv" type="video/ogv"> -->
+				Ваш браузер не поддерживает <code>видео</code> элемент.
+			</video>
+		</div>
 
 		<div class="sliderBottomWrapper">
 			<?php echo do_shortcode('[slick-slider design="design-molpred-events" category="8" dots="true" arrows="false" autoplay="true" autoplay_interval="4000"]'); ?>

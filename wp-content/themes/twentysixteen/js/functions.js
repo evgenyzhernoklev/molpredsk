@@ -205,7 +205,11 @@
 			location.href = target;
 		});
 
-
+		$('.videoMainWrapper').on('click', function(e) {
+			e.preventDefault();
+			var target = $(this).data('href');
+			location.href = target;
+		});
 
 		// video on main page
 		$('.videoWrapper').one('click', function(e) {

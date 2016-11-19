@@ -4528,8 +4528,12 @@ p > video {
 
 
 /****************************** main page video top ******************************/
+.videoMainWrapper {
+    cursor: pointer;
+}
 
 
+/*background-image: url('../../uploads/2016/10/slide_bottom6.jpg');*/
 
 
 
